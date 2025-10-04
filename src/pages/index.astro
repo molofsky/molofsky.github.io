@@ -1,18 +1,18 @@
 ---
 import "../styles/tailwind.css";
 import Header from "../components/Header.astro";
-
-// Parse YAML without plugins
 import expRaw from "../data/experience.yaml?raw";
 import projectsRaw from "../data/projects.yaml?raw";
 import YAML from "yaml";
 
+// import the avatar so Astro rewrites the URL for us
+import avatarUrl from "../assets/AdrianMolofsky.png";
+
 const exp = YAML.parse(expRaw);
 const projects = YAML.parse(projectsRaw);
-
 const tagline = "Artificial Intelligence, Systems";
-const experience = (exp as any[]).sort((a,b)=>(a.weight ?? 999) - (b.weight ?? 999));
-const work = (projects as any[]).sort((a,b)=>(a.weight ?? 999) - (b.weight ?? 999));
+const experience = (exp as any[]).sort((a,b)=>(a.weight??999)-(b.weight??999));
+const work = (projects as any[]).sort((a,b)=>(a.weight??999)-(b.weight??999));
 ---
 
 <html lang="en">
@@ -167,6 +167,9 @@ const work = (projects as any[]).sort((a,b)=>(a.weight ?? 999) - (b.weight ?? 99
 </section>
 
     <!-- scripts -->
-    <script type="module" src="/src/scripts/scrollspy.ts"></script>
+<script type="module">
+  import '../scripts/scrollspy.ts';
+  // import '../scripts/hero-fade.ts'; // if you’re using it
+</script>
   </body>
 </html>
