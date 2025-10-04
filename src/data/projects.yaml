@@ -34,7 +34,7 @@
   weight: 5
 
 - title: "Performance Tradeoffs of Error-Correcting Codes within Network Routers"
-  summary: "Simulated parity, checksum, and Hamming error-correcting codes in 8×8 2D torus routers. Showed parity reduced delivery rate by 12% and checksum incurred 25% bandwidth overhead."
+  summary: "Simulated parity, checksum, and Hamming error-correcting codes in 8×8 2D Torus routers. Showed parity reduced delivery rate by 12% and checksum incurred 25% bandwidth overhead."
   highlight: ""
   link: ""
   linkText: ""
