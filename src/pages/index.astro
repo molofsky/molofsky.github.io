@@ -1,4 +1,6 @@
 ---
+import "../styles/global.css";
+
 const links = {
   mail: "mailto:molofsky@stanford.edu",
   linkedin: "https://www.linkedin.com/in/molofsky/",
@@ -12,34 +14,34 @@ const tagline = "AI & Systems @ Stanford";
     <meta charset="utf-8" />
     <title>Adrian Molofsky</title>
     <meta name="description" content="AI & Systems @ Stanford — Portfolio of Adrian Molofsky" />
+    <!-- Simple icon font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-p4lAhtw3O8w5CuBbD7TAv9x1iLCjY5MZ1v7AdPybzjRHZlfmMXZX9a/7Uzwvns5zD8Jm7o2C9BgK91Kli2It9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
 
-  <body style="font-family:system-ui;line-height:1.5;margin:0;background:#fff;color:#111;">
+  <body>
+    <!-- Hero -->
+    <section class="hero">
+      <img src="/assets/AdrianMolofsky.png" alt="Adrian Molofsky" />
+      <h1>Adrian Molofsky</h1>
+      <p>{tagline}</p>
 
-    <!-- Hero section -->
-    <section style="text-align:center;padding:3rem 1rem 2rem;">
-      <img
-        src="/assets/AdrianMolofsky.png"
-        alt="Adrian Molofsky"
-        style="width:160px;height:160px;border-radius:50%;object-fit:cover;box-shadow:0 2px 8px rgba(0,0,0,0.15);"
-      />
-      <h1 style="font-size:2.4rem;margin:1rem 0 0;">Adrian Molofsky</h1>
-      <p style="font-size:1.2rem;color:#555;margin:0.25rem 0 1rem;">{tagline}</p>
-
-      <nav style="display:flex;justify-content:center;gap:1.2rem;font-size:1rem;">
-        <a href={links.mail} style="text-decoration:none;color:#0072c6;">✉️ Email</a>
-        <a href={links.linkedin} style="text-decoration:none;color:#0072c6;">💼 LinkedIn</a>
-        <a href={links.github} style="text-decoration:none;color:#0072c6;">🐙 GitHub</a>
-      </nav>
+      <div class="links">
+        <a href={links.linkedin}>
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href={links.github}>
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href={links.mail}>
+          <i class="fa-solid fa-envelope"></i> Email
+        </a>
+      </div>
     </section>
 
-    <!-- Projects section -->
-    <main style="max-width:960px;margin:0 auto;padding:0 1rem 4rem;">
-      <h2 style="font-size:1.8rem;border-bottom:2px solid #eee;padding-bottom:0.25rem;margin-bottom:1.5rem;">
-        Projects
-      </h2>
-      <!-- import and render your projects grid here -->
+    <!-- Projects -->
+    <main class="projects">
+      <h2>Projects</h2>
+      <!-- project grid coming soon -->
     </main>
-
   </body>
 </html>

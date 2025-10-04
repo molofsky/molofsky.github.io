@@ -1,0 +1,73 @@
+:root {
+  --stanford-red: #8c1515;
+  --stanford-grey: #555;
+  --link-color: #3b3b3b;
+  --font-stack: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  font-family: var(--font-stack);
+  margin: 0;
+  background: #fff;
+  color: #222;
+  line-height: 1.5;
+}
+
+.hero {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+}
+
+.hero img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.hero h1 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin: 1rem 0 0.3rem;
+  color: var(--stanford-red);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--stanford-grey);
+  margin-bottom: 1rem;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.links a {
+  color: var(--link-color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: opacity 0.2s ease;
+}
+
+.links a:hover {
+  opacity: 0.7;
+}
+
+.projects {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem 4rem;
+}
+
+.projects h2 {
+  font-size: 1.8rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.25rem;
+  margin-bottom: 1.5rem;
+}
