@@ -1,17 +1,36 @@
 ---
-const links = {
-  github: "https://github.com/molofsky",
-};
+const nav = [
+  { href: "#about", label: "About" },
+  { href: "#experience", label: "Experience" },
+  { href: "#projects", label: "Projects" },
+];
 ---
 
-<header class="site-header">
-  <div class="bar">
-    <a class="brand" href="/">Adrian Molofsky</a>
-    <nav class="nav" id="topnav" aria-label="Primary">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href={links.github} target="_blank" rel="noopener">GitHub</a>
+<header class="fixed top-0 left-0 right-0 z-40 backdrop-blur bg-white/60 border-b border-neutral-200/60">
+  <!-- Edge-to-edge: drop max-width container, just pad the viewport -->
+  <div class="w-full px-6 h-14 flex items-center justify-between">
+    <!-- Name: bold, with "Molofsky" in Cardinal -->
+    <a href="/" class="font-bold text-[30px] text-[var(--stanford-black)]">
+      Adrian <span class="text-[var(--stanford-cardinal)]">Molofsky</span>
+    </a>
+
+    <nav id="topnav" class="flex gap-8">
+      {nav.map((n) => (
+        <a
+          href={n.href}
+          class="
+            text-[28px]
+            font-normal
+            text-neutral-700
+            hover:text-[var(--stanford-black)]
+            transition-colors
+            data-[active=true]:text-[var(--stanford-cardinal)]
+          "
+          data-active="false"
+        >
+          {n.label}
+        </a>
+      ))}
     </nav>
   </div>
 </header>

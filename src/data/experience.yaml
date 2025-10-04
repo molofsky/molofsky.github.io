@@ -1,7 +1,7 @@
-- year: "2022 - 2023"
+- year: "2024 - 2025"
   title: "Graduate Research Assistant"
   company: "Stanford University<br>(Engelhardt Lab)"
-  description: "Developed an end-to-end pipeline for training and evaluation of deep learning models. Designed spatial–temporal Transformer architectures for modeling CAR T cell behavior"
+  description: "Developed an end-to-end pipeline for training and evaluation of deep learning models. Designed spatial–temporal Transformer architectures for modeling CAR T cell behavior."
   weight: 1
 
 - year: "Summer 2024"

@@ -1,55 +1,62 @@
 - title: "Convolutional Neural Network Accelerator"
-  summary: "eveloped a ResNet-18 hardware accelerator with a systolic array, FIFO buffering, and tiled address generation."
+  summary: "Developed a ResNet-18 hardware accelerator with a systolic array, FIFO buffering, and tiled address generation. Achieved 3.7× higher throughput, 4× lower power, 2× area reduction, and best Figure of Merit."
   highlight: "Best Figure of Merit"
-  link: "https://github.com/rishirv/Distributed-Pis"
-  linkText: "View Code"
+  link: ""
+  linkText: ""
   weight: 1
 
 - title: "Formalizing Intel’s Remote Action Request"
-  summary: "Created a novel text-similarity model for automated diagnostic coding from free-text clinical notes, demonstrating zero-shot learning capabilities."
-  highlight: "CS 224N Outstanding Project"
-  link: "https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1244/final-projects/ArjunJainDevanshuLadsariaRishiRajVerma.pdf"
-  linkText: "View Report"
+  summary: "Defined an ISA-level memory consistency model for Intel’s Remote Action Request and ran 244 litmus tests, uncovering 27 counterexamples exposing concurrency and load-ordering hazards."
+  highlight: ""
+  link: ""
+  linkText: ""
   weight: 2
 
 - title: "Link Prediction on MIND Dataset with PyG"
-  highlight: "Published in IEEE BigData & Cluster 2021"
-  summary: "Contributed to a modular library for computing Persistent Homology, with focus on approximate distributed computation over large point clouds."
+  summary: "Built a graph neural network on the Microsoft News Dataset (MIND) using GraphSAGE, LightGCN, and GAT layers. Achieved 0.984 AUC-ROC with GAT, improving recall by 95% over LightGCN and 4% over GraphSAGE."
+  highlight: ""
   link: "https://medium.com/stanford-cs224w/link-prediction-on-mind-dataset-with-pyg-5ade4214f823"
-  linkText: "View Code"
+  linkText: "View Report"
   weight: 3
 
 - title: "Comparing Reinforcement Learning Methods for Sparse vs. Dense Rewards"
-  summary: "Developed a one-stop shop for searching for highly-rated restaurants, making reservations, and splitting the bill afterwards, all without requiring the user to leave Discord."
+  summary: "Benchmarked PPO, DDPG, SAC, and TD3 policies on the Point Maze environment. Achieved 30% higher rewards with transfer learning and 16× faster convergence in wall time with PPO than TD3."
+  highlight: ""
   link: "https://github.com/AdrS/cs234-project"
   linkText: "View Code"
   weight: 4
 
 - title: "Rasterization Accelerator"
-  summary: "Predict the runtime of machine learning models from their computation graphs using graph neural networks to optimize computation paths and improve performance."
-  link: "https://medium.com/@h.elezabi/a9d489b37497"
-  linkText: "View Report"
+  summary: "Designed a rasterization hardware accelerator with micropolygon bounding, edge traversal, and pixel sampling. Achieved 2× higher throughput and 1.75× higher frequency through backface culling and clock-gating optimizations."
+  highlight: ""
+  link: ""
+  linkText: ""
   weight: 5
 
 - title: "Performance Tradeoffs of Error-Correcting Codes within Network Routers"
-  summary: "Developed an intelligent agent for the board game Catan using MCTS and Deep Q-Learning techniques."
-  link: "/reports/catan.pdf"
-  linkText: "View Report"
+  summary: "Simulated parity, checksum, and Hamming error-correcting codes in 8×8 2D torus routers. Showed parity reduced delivery rate by 12% and checksum incurred 25% bandwidth overhead."
+  highlight: ""
+  link: ""
+  linkText: ""
   weight: 6
 
 - title: "Register Renaming in a RISC-V Processor"
-  summary: "Developed CNNs to predict average annual income distributions from satellite imagery data."
-  highlight: "Stanford ACMLab 1st Place Project"
+  summary: "Implemented register renaming logic in a pipelined RISC-V processor to reduce write-after-write hazards and improve instruction-level parallelism."
+  highlight: ""
+  link: ""
+  linkText: ""
   weight: 7
 
 - title: "Price-Pure Prediction of Daily Price Changes in Binary Event Contracts"
-  summary: "Developed Serverless Progressive Web App with in-app live chat support and real-time tracking and analytics."
-  link: "https://youtu.be/CGyk1lsDPWM?si=eh3rMA-3y-mlOFwW"
-  linkText: "View Demo"
+  summary: "Forecasted daily price changes in binary event contracts using 10,000+ time-series samples from Kalshi. Demonstrated that CatBoost improved prediction accuracy by 55% over baseline linear regression."
+  highlight: ""
+  link: "https://github.com/molofsky/forecasting-kalshi"
+  linkText: "View Code"
   weight: 8
 
 - title: "USA Computing Olympiad Training Program"
-  summary: "Solutions in C++."
+  summary: "Comprehensive C++ implementations of competitive programming problems from the USA Computing Olympiad training series."
+  highlight: ""
   link: "https://github.com/molofsky/USACO-training"
   linkText: "View Code"
   weight: 9

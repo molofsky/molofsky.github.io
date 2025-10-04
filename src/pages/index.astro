@@ -1,19 +1,18 @@
 ---
-import "../styles/global.css";
+import "../styles/tailwind.css";
 import Header from "../components/Header.astro";
-import exp from "../data/experience.yaml";
-import { getCollection } from "astro:content";
 
-const links = {
-  mail: "mailto:molofsky@stanford.edu",
-  linkedin: "https://www.linkedin.com/in/molofsky/",
-  github: "https://github.com/molofsky",
-};
-const tagline = "AI & Systems @ Stanford";
+// Parse YAML without plugins
+import expRaw from "../data/experience.yaml?raw";
+import projectsRaw from "../data/projects.yaml?raw";
+import YAML from "yaml";
 
-const items = await getCollection("projects");
-const projects = items.sort((a,b)=> (b.data.date??'').localeCompare(a.data.date??''));
-const experience = (exp as any[]).sort((a,b)=> (a.weight??999) - (b.weight??999));
+const exp = YAML.parse(expRaw);
+const projects = YAML.parse(projectsRaw);
+
+const tagline = "Artificial Intelligence, Systems";
+const experience = (exp as any[]).sort((a,b)=>(a.weight ?? 999) - (b.weight ?? 999));
+const work = (projects as any[]).sort((a,b)=>(a.weight ?? 999) - (b.weight ?? 999));
 ---
 
 <html lang="en">
@@ -23,84 +22,151 @@ const experience = (exp as any[]).sort((a,b)=> (a.weight??999) - (b.weight??999)
     <meta name="description" content="AI & Systems @ Stanford — Portfolio of Adrian Molofsky" />
   </head>
 
-  <body>
+  <body class="text-neutral-900 bg-white">
     <Header />
 
-    <!-- Hero -->
-    <section class="hero container" id="top">
-      <img src="/assets/AdrianMolofsky.png" alt="Adrian Molofsky" />
-      <h1>Adrian Molofsky</h1>
-      <p>{tagline}</p>
+    <!-- HERO: full screen, centered -->
+    <section id="hero" class="min-h-screen w-screen flex items-center justify-center bg-white">
+  <div class="text-center px-6">
+    <img
+      src="/assets/AdrianMolofsky.png"
+      alt="Adrian Molofsky"
+      class="w-72 h-72 rounded-full object-cover shadow-xl mx-auto"
+    />
 
-      <div class="links" aria-label="Social links">
-        <a href={links.linkedin} target="_blank" rel="noopener">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.86-3.04c-1.86 0-2.14 1.45-2.14 2.95v5.66H9.35V9h3.41v1.56h.05c.47-.89 1.62-1.83 3.34-1.83c3.57 0 4.23 2.35 4.23 5.41v6.31zM5.34 7.43A2.06 2.06 0 1 1 5.33 3.3a2.06 2.06 0 0 1 .01 4.13zM7.11 20.45H3.56V9h3.55z"/></svg>
-          LinkedIn
-        </a>
-        <a href={links.github} target="_blank" rel="noopener">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.94c.58.1.8-.25.8-.56v-2c-3.2.69-3.87-1.38-3.87-1.38c-.53-1.36-1.3-1.72-1.3-1.72c-1.06-.73.08-.72.08-.72c1.17.08 1.78 1.2 1.78 1.2c1.04 1.78 2.73 1.26 3.4.96c.1-.76.41-1.26.75-1.55c-2.55-.29-5.23-1.28-5.23-5.69c0-1.26.45-2.29 1.2-3.1c-.12-.29-.52-1.46.11-3.04c0 0 .97-.31 3.18 1.18c.92-.26 1.9-.39 2.88-.39s1.96.13 2.88.39c2.2-1.49 3.17-1.18 3.17-1.18c.63 1.58.24 2.75.12 3.04c.75.81 1.19 1.84 1.19 3.1c0 4.42-2.69 5.39-5.25 5.67c.42.36.79 1.08.79 2.18v3.23c0 .31.21.67.81.56A11.5 11.5 0 0 0 23.5 12A11.5 11.5 0 0 0 12 .5Z"/></svg>
-          GitHub
-        </a>
-        <a href={links.mail}>
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v.4l10 6.4l10-6.4V6a2 2 0 0 0-2-2Zm0 4.7l-8 5.1l-8-5.1V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8.7Z"/></svg>
-          Email
-        </a>
-      </div>
-    </section>
+    <h1 class="mt-8 text-7xl font-bold tracking-tight text-[var(--stanford-black)]">
+      Adrian <span class="text-[var(--stanford-cardinal)]">Molofsky</span>
+    </h1>
 
-    <!-- About -->
-    <section id="about" class="section">
-      <div class="container">
-        <h2>About</h2>
-        <p>
-          Hi, I’m Adrian Molofsky. I work at the intersection of AI and systems—building
-          performant ML infrastructure, compilers, and tools. Currently M.S. CS at Stanford.
-        </p>
-      </div>
-    </section>
+    <p class="mt-4 text-[38px] leading-tight font-normal text-[var(--stanford-grey)]">
+      {tagline}
+    </p>
 
-    <!-- Experience -->
-    <section id="experience" class="section">
-      <div class="container">
-        <h2>Experience</h2>
-        {experience.map((e:any) => (
-          <div class="exp-item">
-            <div class="exp-header">
-              <span class="exp-role">{e.title}</span>
-              <span class="exp-org" set:html={e.company}></span>
-              <span class="exp-meta">{e.year}{e.location ? ` · ${e.location}` : ""}</span>
+    <!-- Icons keep the CV grey; hover = Cardinal -->
+    <div class="mt-10 flex items-center justify-center gap-10 text-[var(--stanford-grey)]">
+      <!-- Email -->
+      <a href="mailto:molofsky@stanford.edu"
+         class="transition-transform hover:scale-110" aria-label="Email" title="Email">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+             class="w-10 h-10 fill-[var(--stanford-grey)] hover:fill-[var(--stanford-cardinal)] transition-colors duration-300">
+          <path d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6zm2 0v.01L12 13l8-6.99V6H4zm0 12h16V8l-8 6-8-6v10z"/>
+        </svg>
+      </a>
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/molofsky/" target="_blank" rel="noopener"
+         class="transition-transform hover:scale-110" aria-label="LinkedIn" title="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+             class="w-10 h-10 fill-[var(--stanford-grey)] hover:fill-[var(--stanford-cardinal)] transition-colors duration-300">
+          <path d="M100.28 448H7.4V149.5h92.88zm-46.44-340C24.8 108 0 83.2 0 52.4A52.4
+          52.4 0 0 1 53.84 0C84.4 0 109 24.8 109 55.6c0 30.8-24.6 55.6-55.16 55.6zM447.9
+          448h-92.68V302.4c0-34.7-.7-79.3-48.34-79.3-48.4 0-55.8 37.8-55.8 76.8V448h-92.7
+          V149.5h89V184h1.3c12.4-23.5 42.6-48.3 87.7-48.3 93.8 0 111 61.8 111 142.3V448z"/>
+        </svg>
+      </a>
+      <!-- GitHub -->
+      <a href="https://github.com/molofsky" target="_blank" rel="noopener"
+         class="transition-transform hover:scale-110" aria-label="GitHub" title="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+             class="w-10 h-10 fill-[var(--stanford-grey)] hover:fill-[var(--stanford-cardinal)] transition-colors duration-300">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.438 9.8 8.207 11.387.6.112.793-.261.793-.582
+            0-.288-.011-1.053-.017-2.066-3.338.726-4.042-1.61-4.042-1.61
+            -.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.729.083-.729
+            1.205.085 1.84 1.238 1.84 1.238 1.07 1.832 2.809 1.303 3.495.997
+            .108-.775.419-1.304.762-1.604-2.665-.304-5.466-1.332-5.466-5.931
+            0-1.31.469-2.381 1.236-3.221-.124-.303-.536-1.523.117-3.176 0 0
+            1.008-.322 3.301 1.23a11.5 11.5 0 0 1 3.004-.404c1.02.005 2.047.138
+            3.004.404 2.291-1.552 3.297-1.23 3.297-1.23.655 1.653.243 2.873.12 3.176
+            .77.84 1.235 1.911 1.235 3.221 0 4.61-2.805 5.625-5.475 5.921
+            .43.372.823 1.103.823 2.222 0 1.604-.015 2.897-.015 3.293
+            0 .324.19.699.8.58C20.565 21.795 24 17.308 24 12c0-6.63-5.373-12-12-12z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+    <!-- ABOUT -->
+<section id="about" class="py-20 scroll-mt-24">
+  <div class="mx-auto max-w-screen-xl px-6">
+    <h2 class="text-[2rem] md:text-[2.25rem] font-semibold text-neutral-900 tracking-tight">
+      About
+    </h2>
+    <p class="mt-6 text-[18.5px] md:text-[19px] text-neutral-800 leading-8 max-w-3xl">
+      I am currently pursuing an M.S. and completed a B.S. in Computer Science at Stanford with a minor in Electrical
+      Engineering. I specialize in systems for artificial intelligence—especially distributed systems and optimization.
+      I am advised by Dr. Mark Horowitz and Dr. Barbara Engelhardt. As a graduate research assistant, I investigated coordinated
+      multi-agent imitation learning. Outside of academics, I enjoy chess and golf.
+    </p>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="py-20 scroll-mt-24">
+  <div class="mx-auto max-w-screen-xl px-6">
+    <h2 class="text-[2rem] md:text-[2.25rem] font-semibold text-neutral-900 tracking-tight">
+      Experience
+    </h2>
+
+    <div class="mt-8">
+      {experience.map((e:any) => (
+        <article class="py-7 border-b border-neutral-200">
+          <!-- Left grows, right stays auto width -->
+          <div class="grid grid-cols-[1fr_auto] gap-x-10 items-start">
+            <div class="min-w-0 break-words">
+              <div class="font-semibold text-[19px] leading-snug">{e.title}</div>
+              <div class="italic text-neutral-600 text-[17px] leading-snug" set:html={e.company}></div>
             </div>
-            {e.bullets && (
-              <ul class="exp-bullets">
-                {e.bullets.map((b:string) => <li>{b}</li>)}
-              </ul>
-            )}
-            {e.tech && <div class="exp-tech">Technologies: {e.tech}</div>}
+            <div class="text-[17px] text-neutral-600 whitespace-nowrap text-right">{e.year}</div>
           </div>
-        ))}
-      </div>
-    </section>
 
-    <!-- Projects -->
-    <section id="projects" class="section">
-      <div class="container">
-        <h2>Projects</h2>
-        <div class="grid">
-          {projects.map(({ slug, data }) => (
-            <a class="card" href={`/projects/${slug}/`}>
-              {data.cover && <img src={data.cover} alt={data.title} />}
-              <h3>{data.title}</h3>
-              <p>{data.description}</p>
-              <div class="tags">
-                {data.tags?.map(t => <span class="tag">{t}</span>)}
-              </div>
-            </a>
-          ))}
-        </div>
-      </div>
-    </section>
+          {Array.isArray(e.points) && e.points.length > 0 ? (
+            <ul class="mt-3 list-disc pl-6 text-[17.5px] leading-8 text-neutral-700 space-y-1">
+              {e.points.map((p:string) => <li>{p}</li>)}
+            </ul>
+          ) : (
+            e.description && (
+              <p class="mt-3 text-[17.5px] leading-8 text-neutral-700">{e.description}</p>
+            )
+          )}
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
 
-    <!-- Scroll-spy script -->
+<!-- PROJECTS -->
+<section id="projects" class="py-20 scroll-mt-24">
+  <div class="mx-auto max-w-screen-xl px-6">
+    <h2 class="text-[2rem] md:text-[2.25rem] font-semibold text-neutral-900 tracking-tight">
+      Projects
+    </h2>
+
+    <div class="mt-8 grid gap-7 grid-cols-[repeat(auto-fill,minmax(320px,1fr))]">
+      {work.map((p:any) => (
+        <a
+          href={p.link ?? "#"}
+          target={p.link ? "_blank" : undefined}
+          rel="noopener"
+          class="block border border-neutral-200 rounded-xl p-6 hover:shadow-sm hover:-translate-y-0.5 transition"
+        >
+          <h3 class="font-semibold text-[19px] leading-snug">{p.title}</h3>
+          {p.highlight && (
+            <p class="mt-1 text-[14px] text-[color:#8c1515] font-semibold">{p.highlight}</p>
+          )}
+          <p class="mt-2 text-[17px] text-neutral-700 leading-8">{p.summary}</p>
+          {p.linkText && (
+            <span class="mt-3 inline-block text-[15px] text-neutral-900/80 hover:underline">
+              {p.linkText} →
+            </span>
+          )}
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+    <!-- scripts -->
     <script type="module" src="/src/scripts/scrollspy.ts"></script>
   </body>
 </html>

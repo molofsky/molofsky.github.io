@@ -1,0 +1,23 @@
+/* Computer Modern webfont (closest to LaTeX lmodern) */
+@import url("https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css");
+
+/* Tailwind */
+@import "tailwindcss";
+
+@layer base {
+  html { font-size: 18px; }          /* lifts the whole site */
+  body { line-height: 1.7; }         /* nicer reading rhythm */
+}
+
+/* Global base */
+:root{
+  --stanford-black: #2E2D29;
+  --stanford-cardinal: #8C1515;
+  --stanford-grey: #53565A;
+}
+
+html, body {
+  font-family: "Computer Modern Serif", "Latin Modern Roman", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  color: var(--stanford-black);
+  background: #fff;
+}
