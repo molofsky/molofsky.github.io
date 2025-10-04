@@ -4,11 +4,6 @@
 /* Tailwind */
 @import "tailwindcss";
 
-@layer base {
-  html { font-size: 18px; }          /* lifts the whole site */
-  body { line-height: 1.7; }         /* nicer reading rhythm */
-}
-
 /* Global base */
 :root{
   --stanford-black: #2E2D29;
