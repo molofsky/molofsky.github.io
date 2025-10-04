@@ -1,12 +1,16 @@
 ---
 import "../styles/global.css";
+import { getCollection } from "astro:content";
 
 const links = {
   mail: "mailto:molofsky@stanford.edu",
   linkedin: "https://www.linkedin.com/in/molofsky/",
-  github: "https://github.com/molofsky"
+  github: "https://github.com/molofsky",
 };
+
 const tagline = "AI & Systems @ Stanford";
+const items = await getCollection('projects');
+const projects = items.sort((a,b)=> (b.data.date??'').localeCompare(a.data.date??''));
 ---
 
 <html lang="en">
@@ -14,34 +18,119 @@ const tagline = "AI & Systems @ Stanford";
     <meta charset="utf-8" />
     <title>Adrian Molofsky</title>
     <meta name="description" content="AI & Systems @ Stanford — Portfolio of Adrian Molofsky" />
-    <!-- Simple icon font -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-p4lAhtw3O8w5CuBbD7TAv9x1iLCjY5MZ1v7AdPybzjRHZlfmMXZX9a/7Uzwvns5zD8Jm7o2C9BgK91Kli2It9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
 
   <body>
+    <!-- Transparent sticky header -->
+    <header class="site-header">
+      <div class="bar">
+        <a class="brand" href="/">Adrian Molofsky</a>
+        <nav class="nav" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href={links.github} target="_blank" rel="noopener">GitHub</a>
+        </nav>
+      </div>
+    </header>
+
     <!-- Hero -->
-    <section class="hero">
+    <section class="hero container" id="top">
       <img src="/assets/AdrianMolofsky.png" alt="Adrian Molofsky" />
       <h1>Adrian Molofsky</h1>
       <p>{tagline}</p>
 
-      <div class="links">
-        <a href={links.linkedin}>
-          <i class="fab fa-linkedin"></i> LinkedIn
+      <div class="links" aria-label="Social links">
+        <a href={links.linkedin} target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.86-3.04c-1.86 0-2.14 1.45-2.14 2.95v5.66H9.35V9h3.41v1.56h.05c.47-.89 1.62-1.83 3.34-1.83c3.57 0 4.23 2.35 4.23 5.41v6.31zM5.34 7.43A2.06 2.06 0 1 1 5.33 3.3a2.06 2.06 0 0 1 .01 4.13zM7.11 20.45H3.56V9h3.55z"/></svg>
+          LinkedIn
         </a>
-        <a href={links.github}>
-          <i class="fab fa-github"></i> GitHub
+        <a href={links.github} target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.94c.58.1.8-.25.8-.56v-2c-3.2.69-3.87-1.38-3.87-1.38c-.53-1.36-1.3-1.72-1.3-1.72c-1.06-.73.08-.72.08-.72c1.17.08 1.78 1.2 1.78 1.2c1.04 1.78 2.73 1.26 3.4.96c.1-.76.41-1.26.75-1.55c-2.55-.29-5.23-1.28-5.23-5.69c0-1.26.45-2.29 1.2-3.1c-.12-.29-.52-1.46.11-3.04c0 0 .97-.31 3.18 1.18c.92-.26 1.9-.39 2.88-.39s1.96.13 2.88.39c2.2-1.49 3.17-1.18 3.17-1.18c.63 1.58.24 2.75.12 3.04c.75.81 1.19 1.84 1.19 3.1c0 4.42-2.69 5.39-5.25 5.67c.42.36.79 1.08.79 2.18v3.23c0 .31.21.67.81.56A11.5 11.5 0 0 0 23.5 12A11.5 11.5 0 0 0 12 .5Z"/></svg>
+          GitHub
         </a>
         <a href={links.mail}>
-          <i class="fa-solid fa-envelope"></i> Email
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v.4l10 6.4l10-6.4V6a2 2 0 0 0-2-2Zm0 4.7l-8 5.1l-8-5.1V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8.7Z"/></svg>
+          Email
         </a>
       </div>
     </section>
 
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About</h2>
+        <p>
+          Hi, I’m Adrian Molofsky. I work at the intersection of AI and systems—building
+          performant ML infrastructure, compilers, and tools. Currently M.S. CS at Stanford.
+        </p>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h2>Experience</h2>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <span class="exp-role">Graduate Research Assistant</span>
+            <span class="exp-org">Stanford University — Barbara Engelhardt</span>
+            <span class="exp-meta">2024–2025 · Stanford, CA</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Built end-to-end DL training & eval pipeline; spatial–temporal Transformers for CAR-T behavior.</li>
+            <li>98% accuracy; 20× speedup vs LSTM baseline on 165K+ patch embeddings.</li>
+            <li>Scaled across 4× NVIDIA A30s (8h → 2h runtime).</li>
+          </ul>
+          <div class="exp-tech">Technologies: PyTorch Lightning, NumPy, TensorFlow</div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <span class="exp-role">Data Science Intern</span>
+            <span class="exp-org">Gladstone Institutes — Barbara Engelhardt</span>
+            <span class="exp-meta">Summer 2024 · San Francisco, CA</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Ingestion & validation pipelines for live-cell imaging; Markov state transitions on 4K+ frames.</li>
+            <li>Denoising, feature extraction, dimensionality reduction to enhance predictive signal.</li>
+          </ul>
+          <div class="exp-tech">Technologies: Pandas, scikit-learn</div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <span class="exp-role">Research Intern</span>
+            <span class="exp-org">UCSF — Tomasz Nowakowski</span>
+            <span class="exp-meta">Summer 2023 · San Francisco, CA</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Conditional gradient optimization for spatial transcriptomics + scRNA-seq reconstruction (38K+ cells).</li>
+            <li>Scaled pipeline on 2× NVIDIA A100s.</li>
+          </ul>
+          <div class="exp-tech">Technologies: PyTorch, CUDA</div>
+        </div>
+      </div>
+    </section>
+
     <!-- Projects -->
-    <main class="projects">
-      <h2>Projects</h2>
-      <!-- project grid coming soon -->
-    </main>
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="grid">
+          {projects.map(({ slug, data }) => (
+            <a class="card" href={`/projects/${slug}/`}>
+              {data.cover && <img src={data.cover} alt={data.title} />}
+              <h3>{data.title}</h3>
+              <p>{data.description}</p>
+              <div class="tags">
+                {data.tags?.map(t => <span class="tag">{t}</span>)}
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
   </body>
 </html>
