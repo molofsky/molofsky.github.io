@@ -92,7 +92,7 @@ const work = (projects as any[]).sort((a,b)=>(a.weight??999)-(b.weight??999));
     <h2 class="text-[2rem] md:text-[2.25rem] font-semibold text-neutral-900 tracking-tight">
       About
     </h2>
-    <p class="mt-6 text-[18.5px] md:text-[19px] text-neutral-800 leading-8 max-w-3xl">
+    <p class="mt-3 text-[18.5px] md:text-[19px] text-neutral-800 leading-8 max-w-3xl">
       I am currently pursuing an M.S. and completed a B.S. in Computer Science at Stanford with a minor in Electrical
       Engineering. I specialize in systems for artificial intelligence—especially distributed systems and optimization.
       I am advised by Dr. Mark Horowitz and Dr. Barbara Engelhardt. As a graduate research assistant, I investigated coordinated
@@ -108,7 +108,7 @@ const work = (projects as any[]).sort((a,b)=>(a.weight??999)-(b.weight??999));
       Experience
     </h2>
 
-    <div class="mt-8">
+    <div class="mt-0">
       {experience.map((e:any) => (
         <article class="py-7 border-b border-neutral-200">
           <!-- Left grows, right stays auto width -->
