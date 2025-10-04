@@ -1,0 +1,55 @@
+- title: "Convolutional Neural Network Accelerator"
+  summary: "eveloped a ResNet-18 hardware accelerator with a systolic array, FIFO buffering, and tiled address generation."
+  highlight: "Best Figure of Merit"
+  link: "https://github.com/rishirv/Distributed-Pis"
+  linkText: "View Code"
+  weight: 1
+
+- title: "Formalizing Intel’s Remote Action Request"
+  summary: "Created a novel text-similarity model for automated diagnostic coding from free-text clinical notes, demonstrating zero-shot learning capabilities."
+  highlight: "CS 224N Outstanding Project"
+  link: "https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1244/final-projects/ArjunJainDevanshuLadsariaRishiRajVerma.pdf"
+  linkText: "View Report"
+  weight: 2
+
+- title: "Link Prediction on MIND Dataset with PyG"
+  highlight: "Published in IEEE BigData & Cluster 2021"
+  summary: "Contributed to a modular library for computing Persistent Homology, with focus on approximate distributed computation over large point clouds."
+  link: "https://medium.com/stanford-cs224w/link-prediction-on-mind-dataset-with-pyg-5ade4214f823"
+  linkText: "View Code"
+  weight: 3
+
+- title: "Comparing Reinforcement Learning Methods for Sparse vs. Dense Rewards"
+  summary: "Developed a one-stop shop for searching for highly-rated restaurants, making reservations, and splitting the bill afterwards, all without requiring the user to leave Discord."
+  link: "https://github.com/AdrS/cs234-project"
+  linkText: "View Code"
+  weight: 4
+
+- title: "Rasterization Accelerator"
+  summary: "Predict the runtime of machine learning models from their computation graphs using graph neural networks to optimize computation paths and improve performance."
+  link: "https://medium.com/@h.elezabi/a9d489b37497"
+  linkText: "View Report"
+  weight: 5
+
+- title: "Performance Tradeoffs of Error-Correcting Codes within Network Routers"
+  summary: "Developed an intelligent agent for the board game Catan using MCTS and Deep Q-Learning techniques."
+  link: "/reports/catan.pdf"
+  linkText: "View Report"
+  weight: 6
+
+- title: "Register Renaming in a RISC-V Processor"
+  summary: "Developed CNNs to predict average annual income distributions from satellite imagery data."
+  highlight: "Stanford ACMLab 1st Place Project"
+  weight: 7
+
+- title: "Price-Pure Prediction of Daily Price Changes in Binary Event Contracts"
+  summary: "Developed Serverless Progressive Web App with in-app live chat support and real-time tracking and analytics."
+  link: "https://youtu.be/CGyk1lsDPWM?si=eh3rMA-3y-mlOFwW"
+  linkText: "View Demo"
+  weight: 8
+
+- title: "USA Computing Olympiad Training Program"
+  summary: "Solutions in C++."
+  link: "https://github.com/molofsky/USACO-training"
+  linkText: "View Code"
+  weight: 9

@@ -1,0 +1,17 @@
+- year: "2022 - 2023"
+  title: "Graduate Research Assistant"
+  company: "Stanford University<br>(Engelhardt Lab)"
+  description: "Developed an end-to-end pipeline for training and evaluation of deep learning models. Designed spatial–temporal Transformer architectures for modeling CAR T cell behavior"
+  weight: 1
+
+- year: "Summer 2024"
+  title: "Data Science Intern"
+  company: "Gladstone Institutes"
+  description: "Developed ingestion and validation pipelines for live-cell imaging datasets. Engineered denoising, feature extraction, and dimensionality reduction to enhance predictive signal."
+  weight: 2
+
+- year: "Summer 2023"
+  title: "Research Intern"
+  company: "University of California, San Francisco"
+  description: "Implemented conditional gradient optimization for reconstruction of spatial transcriptomics and scRNA-seq datasets. Scaled optimization pipeline across two NVIDIA A100 GPUs."
+  weight: 3

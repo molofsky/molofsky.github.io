@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import Header from "../components/Header.astro";
+import exp from "../data/experience.yaml";
 import { getCollection } from "astro:content";
 
 const links = {
@@ -7,10 +9,11 @@ const links = {
   linkedin: "https://www.linkedin.com/in/molofsky/",
   github: "https://github.com/molofsky",
 };
-
 const tagline = "AI & Systems @ Stanford";
-const items = await getCollection('projects');
+
+const items = await getCollection("projects");
 const projects = items.sort((a,b)=> (b.data.date??'').localeCompare(a.data.date??''));
+const experience = (exp as any[]).sort((a,b)=> (a.weight??999) - (b.weight??999));
 ---
 
 <html lang="en">
@@ -21,18 +24,7 @@ const projects = items.sort((a,b)=> (b.data.date??'').localeCompare(a.data.date?
   </head>
 
   <body>
-    <!-- Transparent sticky header -->
-    <header class="site-header">
-      <div class="bar">
-        <a class="brand" href="/">Adrian Molofsky</a>
-        <nav class="nav" aria-label="Primary">
-          <a href="#about">About</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href={links.github} target="_blank" rel="noopener">GitHub</a>
-        </nav>
-      </div>
-    </header>
+    <Header />
 
     <!-- Hero -->
     <section class="hero container" id="top">
@@ -71,46 +63,21 @@ const projects = items.sort((a,b)=> (b.data.date??'').localeCompare(a.data.date?
     <section id="experience" class="section">
       <div class="container">
         <h2>Experience</h2>
-
-        <div class="exp-item">
-          <div class="exp-header">
-            <span class="exp-role">Graduate Research Assistant</span>
-            <span class="exp-org">Stanford University — Barbara Engelhardt</span>
-            <span class="exp-meta">2024–2025 · Stanford, CA</span>
+        {experience.map((e:any) => (
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="exp-role">{e.title}</span>
+              <span class="exp-org" set:html={e.company}></span>
+              <span class="exp-meta">{e.year}{e.location ? ` · ${e.location}` : ""}</span>
+            </div>
+            {e.bullets && (
+              <ul class="exp-bullets">
+                {e.bullets.map((b:string) => <li>{b}</li>)}
+              </ul>
+            )}
+            {e.tech && <div class="exp-tech">Technologies: {e.tech}</div>}
           </div>
-          <ul class="exp-bullets">
-            <li>Built end-to-end DL training & eval pipeline; spatial–temporal Transformers for CAR-T behavior.</li>
-            <li>98% accuracy; 20× speedup vs LSTM baseline on 165K+ patch embeddings.</li>
-            <li>Scaled across 4× NVIDIA A30s (8h → 2h runtime).</li>
-          </ul>
-          <div class="exp-tech">Technologies: PyTorch Lightning, NumPy, TensorFlow</div>
-        </div>
-
-        <div class="exp-item">
-          <div class="exp-header">
-            <span class="exp-role">Data Science Intern</span>
-            <span class="exp-org">Gladstone Institutes — Barbara Engelhardt</span>
-            <span class="exp-meta">Summer 2024 · San Francisco, CA</span>
-          </div>
-          <ul class="exp-bullets">
-            <li>Ingestion & validation pipelines for live-cell imaging; Markov state transitions on 4K+ frames.</li>
-            <li>Denoising, feature extraction, dimensionality reduction to enhance predictive signal.</li>
-          </ul>
-          <div class="exp-tech">Technologies: Pandas, scikit-learn</div>
-        </div>
-
-        <div class="exp-item">
-          <div class="exp-header">
-            <span class="exp-role">Research Intern</span>
-            <span class="exp-org">UCSF — Tomasz Nowakowski</span>
-            <span class="exp-meta">Summer 2023 · San Francisco, CA</span>
-          </div>
-          <ul class="exp-bullets">
-            <li>Conditional gradient optimization for spatial transcriptomics + scRNA-seq reconstruction (38K+ cells).</li>
-            <li>Scaled pipeline on 2× NVIDIA A100s.</li>
-          </ul>
-          <div class="exp-tech">Technologies: PyTorch, CUDA</div>
-        </div>
+        ))}
       </div>
     </section>
 
@@ -132,5 +99,8 @@ const projects = items.sort((a,b)=> (b.data.date??'').localeCompare(a.data.date?
         </div>
       </div>
     </section>
+
+    <!-- Scroll-spy script -->
+    <script type="module" src="/src/scripts/scrollspy.ts"></script>
   </body>
 </html>
