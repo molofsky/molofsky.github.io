@@ -20,7 +20,7 @@
   weight: 3
 
 - title: "Comparing Reinforcement Learning Methods for Sparse vs. Dense Rewards"
-  summary: "Benchmarked PPO, DDPG, SAC, and TD3 policies on the Point Maze environment. Achieved 30% higher rewards with transfer learning and 16× faster convergence in wall time with PPO than TD3."
+  summary: "Benchmarked PPO, DDPG, SAC, and TD3 policies on a 1,000 sample states from the Point Maze environment. Achieved 30% higher rewards with transfer learning and 16× faster convergence in wall time with PPO than TD3."
   highlight: ""
   link: "https://github.com/AdrS/cs234-project"
   linkText: "View Code"
