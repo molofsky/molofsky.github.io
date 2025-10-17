@@ -1,47 +1,50 @@
-- title: "Convolutional Neural Network Accelerator"
-  summary: "Developed a ResNet-18 hardware accelerator with a systolic array, FIFO buffering, and tiled address generation. Achieved 3.7× higher throughput, 4× lower power, 2× area reduction, and best Figure of Merit."
-  highlight: ""
-  link: ""
-  linkText: ""
-  weight: 1
-
-- title: "Formalizing Intel’s Remote Action Request"
-  summary: "Defined an ISA-level memory consistency model for Intel’s Remote Action Request and ran 244 litmus tests, uncovering 27 counterexamples exposing concurrency and load-ordering hazards."
-  highlight: ""
-  link: ""
-  linkText: ""
-  weight: 2
-
-- title: "Link Prediction on MIND Dataset with PyG"
-  summary: "Built a graph neural network on the Microsoft News Dataset (MIND) using GraphSAGE, LightGCN, and GAT layers. Achieved 0.984 AUC-ROC with GAT, improving recall by 95% over LightGCN and 4% over GraphSAGE."
-  highlight: ""
-  link: "https://medium.com/stanford-cs224w/link-prediction-on-mind-dataset-with-pyg-5ade4214f823"
-  linkText: "View Report"
-  weight: 3
 
 - title: "Comparing Reinforcement Learning Methods for Sparse vs. Dense Rewards"
   summary: "Benchmarked PPO, DDPG, SAC, and TD3 policies on a 1,000 sample states from the Point Maze environment. Achieved 30% higher rewards with transfer learning and 16× faster convergence in wall time with PPO than TD3."
   highlight: ""
   link: "https://github.com/AdrS/cs234-project"
   linkText: "View Code"
-  weight: 4
+  weight: 1
+
+- title: "Link Prediction on MIND Dataset with PyG"
+  summary: "Built a graph neural network on the Microsoft News Dataset (MIND) using GraphSAGE, LightGCN, and GAT layers. Achieved 0.984 AUC-ROC with GAT, improving recall by 95% over LightGCN and 4% over GraphSAGE."
+  highlight: ""
+  link: "https://medium.com/stanford-cs224w/link-prediction-on-mind-dataset-with-pyg-5ade4214f823"
+  linkText: "View Report"
+  weight: 2
+
+- title: "Convolutional Neural Network Accelerator"
+  summary: "Developed a ResNet-18 hardware accelerator with a systolic array, FIFO buffering, and tiled address generation. Achieved 3.7× higher throughput, 4× lower power, 2× area reduction, and best Figure of Merit."
+  highlight: ""
+  link: ""
+  linkText: ""
+  weight: 3
 
 - title: "Rasterization Accelerator"
   summary: "Designed a rasterization hardware accelerator with micropolygon bounding, edge traversal, and pixel sampling. Achieved 2× higher throughput and 1.75× higher frequency through backface culling and clock-gating optimizations."
   highlight: ""
   link: ""
   linkText: ""
+  weight: 4
+
+- title: "Register Renaming in a RISC-V Processor"
+  summary: "Implemented register renaming logic in a pipelined RISC-V processor to eliminate write-after-write and write-after-read hazards."
+  highlight: ""
+  link: ""
+  linkText: ""
   weight: 5
 
-- title: "Performance Tradeoffs of Error-Correcting Codes within Network Routers"
-  summary: "Simulated parity, checksum, and Hamming error-correcting codes in 8×8 2D Torus routers. Showed parity reduced delivery rate by 12% and checksum incurred 25% bandwidth overhead."
+
+- title: "Formalizing Intel’s Remote Action Request"
+  summary: "Defined an ISA-level memory consistency model for Intel’s Remote Action Request and ran 244 litmus tests, uncovering 27 counterexamples exposing concurrency and load-ordering hazards."
   highlight: ""
   link: ""
   linkText: ""
   weight: 6
 
-- title: "Register Renaming in a RISC-V Processor"
-  summary: "Implemented register renaming logic in a pipelined RISC-V processor to eliminate write-after-write and write-after-read hazards."
+
+- title: "Performance Tradeoffs of Error-Correcting Codes within Network Routers"
+  summary: "Simulated parity, checksum, and Hamming error-correcting codes in 8×8 2D Torus routers. Showed parity reduced delivery rate by 12% and checksum incurred 25% bandwidth overhead."
   highlight: ""
   link: ""
   linkText: ""
@@ -54,8 +57,8 @@
   linkText: ""
   weight: 8
 
-- title: "USA Computing Olympiad Training Program"
-  summary: "Solutions in C++, Python, and Java."
+- title: "Five-Stage Pipelined MIPS Processor"
+  summary: "Developed a five-stage pipelined processor implementing the MIPS ISA with hazard detection, forwarding, and stall control. Synthesized on FPGA to perform real-time edge detection using a Sobel filter."
   highlight: ""
   link: ""
   linkText: ""

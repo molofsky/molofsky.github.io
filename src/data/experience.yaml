@@ -1,9 +1,13 @@
 - year: "2024 - 2025"
-  title: "Graduate Research Assistant"
+  title: "Research Assistant"
   company: "Stanford University"
   supervisor: "Dr. Barbara Engelhardt"
   location: "Stanford, CA"
-  description: "Developed an end-to-end pipeline for training and evaluation of deep learning models. Designed spatial–temporal Transformer architectures for modeling CAR T cell behavior. Achieved 98%  accuracy and 20x improvement over an LSTM baseline on 165K+ patch embeddings. Scaled training across four NVIDIA A30 GPUs, reducing runtime from 8 hours to 2 hours."
+  points:
+    - "Developed an end-to-end pipeline for training, evaluating, and testing deep learning models."
+    - "Designed, deployed, and optimized Transformers for modeling cell behavior."
+    - "Improved inference, memory efficiency, and interpretability across 165K+ patch embeddings."
+    - "Distributed training across a GPU cluster, managing job scheduling, resource allocation, and cluster configuration."
   weight: 1
 
 - year: "Summer 2024"
@@ -11,7 +15,10 @@
   company: "Gladstone Institutes"
   supervisor: "Dr. Barbara Engelhardt"
   location: "San Francisco, CA"
-  description: "Developed ingestion and validation pipelines for live-cell imaging datasets. Modeled Markov state transitions to capture cell proliferation across 4K+ sequential frames. Engineered denoising, feature extraction, and dimensionality reduction to enhance predictive signal."
+  points:
+    - "Developed image reconstruction, analysis, and visualization pipelines for live-cell imaging datasets."
+    - "Tracked and quantified cell migration, proliferation, and morphology across 4K+ image frames."
+    - "Implemented image registration, feature extraction, and dimensionality reduction."
   weight: 2
 
 - year: "Summer 2023"
@@ -19,5 +26,17 @@
   company: "University of California, San Francisco"
   supervisor: "Dr. Tomasz Nowakowski"
   location: "San Francisco, CA"
-  description: "Implemented conditional gradient optimization for reconstruction of spatial transcriptomics and scRNA-seq datasets. Modeled latent factor distributions to impute missing gene expression values across 38K+ cells. Scaled optimization pipeline across two NVIDIA A100 GPUs."
+  points: 
+   - "Developed multimodal pipelines integrating histology, spatial transcriptomics, and single-cell RNA-sequencing."
+   - "Improved optimization, Bayesian, and contrastive learning models across 38K+ cells."
+   - "Distributed training across a GPU cluster, monitoring performance, logging metrics, and reducing train time."
   weight: 3
+
+- year: "Summer 2019"
+  title: "Research Intern"
+  company: "University of California, San Francisco"
+  supervisor: "Dr. Julia Sbierski-Kind"
+  location: "San Francisco, CA"
+  points:
+    - "Analyzed in vivo cell-cell interactions to study immune and metabolic signaling pathways. "
+  weight: 4
