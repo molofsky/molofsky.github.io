@@ -1,6 +1,6 @@
 - title: "Convolutional Neural Network Accelerator"
   summary: "Developed a ResNet-18 hardware accelerator with a systolic array, FIFO buffering, and tiled address generation. Achieved 3.7× higher throughput, 4× lower power, 2× area reduction, and best Figure of Merit."
-  highlight: "Best Figure of Merit"
+  highlight: ""
   link: ""
   linkText: ""
   weight: 1
