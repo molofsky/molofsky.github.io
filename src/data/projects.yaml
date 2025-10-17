@@ -50,13 +50,13 @@
 - title: "Price-Pure Prediction of Daily Price Changes in Binary Event Contracts"
   summary: "Forecasted daily price changes in binary event contracts backtesting on 10K+ time-series samples from Kalshi. Demonstrated that CatBoost improved prediction accuracy by 55% over baseline linear regression."
   highlight: ""
-  link: "https://github.com/molofsky/forecasting-kalshi"
-  linkText: "View Code"
+  link: ""
+  linkText: ""
   weight: 8
 
 - title: "USA Computing Olympiad Training Program"
-  summary: "Solutions in C++."
+  summary: "Solutions in C++, Python, and Java."
   highlight: ""
-  link: "https://github.com/molofsky/USACO-training"
-  linkText: "View Code"
+  link: ""
+  linkText: ""
   weight: 9
