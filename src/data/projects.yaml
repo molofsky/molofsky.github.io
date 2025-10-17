@@ -41,21 +41,21 @@
   weight: 6
 
 - title: "Register Renaming in a RISC-V Processor"
-  summary: "Implemented register renaming logic in a pipelined RISC-V processor to reduce write-after-write hazards and improve instruction-level parallelism."
+  summary: "Implemented register renaming logic in a pipelined RISC-V processor to eliminate write-after-write and write-after-read hazards."
   highlight: ""
   link: ""
   linkText: ""
   weight: 7
 
 - title: "Price-Pure Prediction of Daily Price Changes in Binary Event Contracts"
-  summary: "Forecasted daily price changes in binary event contracts using 10,000+ time-series samples from Kalshi. Demonstrated that CatBoost improved prediction accuracy by 55% over baseline linear regression."
+  summary: "Forecasted daily price changes in binary event contracts backtesting on 10K+ time-series samples from Kalshi. Demonstrated that CatBoost improved prediction accuracy by 55% over baseline linear regression."
   highlight: ""
   link: "https://github.com/molofsky/forecasting-kalshi"
   linkText: "View Code"
   weight: 8
 
 - title: "USA Computing Olympiad Training Program"
-  summary: "Comprehensive C++ implementations of competitive programming problems from the USA Computing Olympiad training series."
+  summary: "Solutions in C++."
   highlight: ""
   link: "https://github.com/molofsky/USACO-training"
   linkText: "View Code"
