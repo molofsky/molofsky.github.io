@@ -5,7 +5,7 @@
   location: "Stanford, CA"
   points:
     - "Developed an end-to-end pipeline for training, evaluating, and testing deep learning models."
-    - "Designed, deployed, and optimized Transformers for modeling cell behavior."
+    - "Designed, deployed, and optimized Transformers for modeling immune cell behavior."
     - "Improved inference, memory efficiency, and interpretability across 165K+ patch embeddings."
     - "Distributed training across a GPU cluster, managing job scheduling, resource allocation, and cluster configuration."
   weight: 1
@@ -38,5 +38,5 @@
   supervisor: "Dr. Julia Sbierski-Kind"
   location: "San Francisco, CA"
   points:
-    - "Analyzed in vivo cell-cell interactions to study immune and metabolic signaling pathways. "
+    - "Analyzed in vivo cell–cell interactions in mouse models of immune and metabolic disorders."
   weight: 4
