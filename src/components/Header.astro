@@ -1,6 +1,4 @@
 ---
-import clientUrl from "../scripts/init-scrollspy-client.ts?url";
-
 const nav = [
   { href: "#bio", label: "Bio" },
   { href: "#experience", label: "Experience" },
@@ -35,5 +33,83 @@ const nav = [
     </nav>
   </div>
 
-  <script type="module" src={clientUrl}></script>
+  <!-- Inline scroll-spy + init script -->
+  <script type="module">
+    // ---- scroll-spy.ts ----
+    let _installed = false;
+
+    function initScrollSpy() {
+      if (_installed) return; // idempotent
+      _installed = true;
+
+      const sections = Array.from(
+        document.querySelectorAll('section[id][data-spy="section"]')
+      );
+      const linkMap = new Map();
+
+      document.querySelectorAll('a[data-scrollspy]').forEach((a) => {
+        const href = a.getAttribute('href') || '';
+        if (href.startsWith('#')) linkMap.set(href.slice(1), a);
+      });
+
+      const setActive = (id) => {
+        linkMap.forEach((a) => a.setAttribute('data-active', 'false'));
+        if (id && linkMap.get(id)) linkMap.get(id).setAttribute('data-active', 'true');
+      };
+
+      const getOffsetTop = (el) => {
+        let top = 0;
+        let node = el;
+        while (node) {
+          top += node.offsetTop || 0;
+          node = node.offsetParent;
+        }
+        return top;
+      };
+
+      let tops = [];
+      const recompute = () => {
+        tops = sections.map((s) => ({ id: s.id, top: getOffsetTop(s) }));
+        tops.sort((a, b) => a.top - b.top);
+      };
+      recompute();
+
+      const FOCUS_RATIO = 0.30; // 30% down from viewport top
+
+      const update = () => {
+        const focusY = window.scrollY + window.innerHeight * FOCUS_RATIO;
+        let currentId = undefined;
+        for (const s of tops) {
+          if (focusY >= s.top) currentId = s.id;
+          else break;
+        }
+        setActive(currentId);
+      };
+
+      update();
+
+      window.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', () => {
+        recompute();
+        update();
+      });
+
+      window.addEventListener('hashchange', () => {
+        requestAnimationFrame(() => {
+          recompute();
+          update();
+        });
+      });
+
+      window.addEventListener('load', () => {
+        recompute();
+        update();
+      });
+    }
+
+    // ---- init-scrollspy-client.ts ----
+    window.addEventListener('astro:page-load', () => initScrollSpy());
+    window.addEventListener('DOMContentLoaded', () => initScrollSpy());
+    initScrollSpy();
+  </script>
 </header>
