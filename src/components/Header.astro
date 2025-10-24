@@ -1,15 +1,13 @@
 ---
 const nav = [
-  { href: "#about", label: "About" },
+  { href: "#bio", label: "Bio" },
   { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
 ];
 ---
 
 <header class="fixed top-0 left-0 right-0 z-40 backdrop-blur bg-white/60 border-b border-neutral-200/60">
-  <!-- Edge-to-edge: drop max-width container, just pad the viewport -->
   <div class="w-full px-6 h-14 flex items-center justify-between">
-    <!-- Name: bold, with "Molofsky" in Cardinal -->
     <a href="/" class="font-bold text-[30px] text-[var(--stanford-black)]">
       Adrian <span class="text-[var(--stanford-cardinal)]">Molofsky</span>
     </a>
@@ -18,6 +16,8 @@ const nav = [
       {nav.map((n) => (
         <a
           href={n.href}
+          data-scrollspy
+          data-active="false"
           class="
             text-[28px]
             font-normal
@@ -26,11 +26,13 @@ const nav = [
             transition-colors
             data-[active=true]:text-[var(--stanford-cardinal)]
           "
-          data-active="false"
         >
           {n.label}
         </a>
       ))}
     </nav>
   </div>
+
+  <!-- Load the client script as a real ES module so imports work -->
+  <script type="module" src="src/scripts/init-scrollspy-client.ts"></script>
 </header>
