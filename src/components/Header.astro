@@ -1,4 +1,6 @@
 ---
+import clientUrl from "../scripts/init-scrollspy-client.ts?url";
+
 const nav = [
   { href: "#bio", label: "Bio" },
   { href: "#experience", label: "Experience" },
@@ -33,6 +35,5 @@ const nav = [
     </nav>
   </div>
 
-  <!-- Load the client script as a real ES module so imports work -->
-  <script type="module" src="/src/scripts/init-scrollspy-client.ts"></script>
+  <script type="module" src={clientUrl}></script>
 </header>
