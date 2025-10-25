@@ -13,26 +13,33 @@
   linkText: "View Report"
   weight: 2
 
+- title: "Price-Pure Prediction of Daily Price Changes in Binary Event Contracts"
+  summary: "Forecasted daily price changes in binary event contracts backtesting on 10K+ time-series samples from Kalshi. Demonstrated that CatBoost improved prediction accuracy by 55% over baseline linear regression."
+  highlight: ""
+  link: "https://github.com/molofsky/forecasting-kalshi"
+  linkText: "View Code"
+  weight: 3
+
 - title: "Convolutional Neural Network Accelerator"
   summary: "Developed a ResNet-18 hardware accelerator with a systolic array, FIFO buffering, and tiled address generation. Achieved 3.7× higher throughput, 4× lower power, 2× area reduction, and best Figure of Merit."
   highlight: ""
   link: ""
   linkText: ""
-  weight: 3
+  weight: 4
 
 - title: "Rasterization Accelerator"
   summary: "Designed a rasterization hardware accelerator with micropolygon bounding, edge traversal, and pixel sampling. Achieved 2× higher throughput and 1.75× higher frequency through backface culling and clock-gating optimizations."
   highlight: ""
   link: ""
   linkText: ""
-  weight: 4
+  weight: 5
 
 - title: "Register Renaming in a RISC-V Processor"
   summary: "Implemented register renaming logic in a pipelined RISC-V processor to eliminate write-after-write and write-after-read hazards."
   highlight: ""
   link: ""
   linkText: ""
-  weight: 5
+  weight: 6
 
 
 - title: "Formalizing Intel’s Remote Action Request"
@@ -49,13 +56,6 @@
   link: ""
   linkText: ""
   weight: 7
-
-- title: "Price-Pure Prediction of Daily Price Changes in Binary Event Contracts"
-  summary: "Forecasted daily price changes in binary event contracts backtesting on 10K+ time-series samples from Kalshi. Demonstrated that CatBoost improved prediction accuracy by 55% over baseline linear regression."
-  highlight: ""
-  link: ""
-  linkText: ""
-  weight: 8
 
 - title: "Five-Stage Pipelined MIPS Processor"
   summary: "Developed a five-stage pipelined processor implementing the MIPS ISA with hazard detection, forwarding, and stall control. Synthesized on FPGA to perform real-time edge detection using a Sobel filter."

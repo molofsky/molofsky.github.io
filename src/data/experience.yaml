@@ -4,9 +4,8 @@
   supervisor: "Dr. Barbara Engelhardt"
   location: "Stanford, CA"
   points:
-    - "Developed an end-to-end pipeline for training, evaluating, and testing deep learning models."
-    - "Designed, deployed, and optimized Transformers for modeling immune cell behavior."
-    - "Improved inference, memory efficiency, and interpretability across 165K+ patch embeddings."
+    - "Developed an end-to-end pipeline for training, evaluating, testing, and deploying deep learning models."
+    - "Improved inference and memory efficiency across 165K+ patch embeddings representing immune cell behavior."
     - "Distributed training across a GPU cluster, managing job scheduling, resource allocation, and cluster configuration."
   weight: 1
 
@@ -17,8 +16,8 @@
   location: "San Francisco, CA"
   points:
     - "Developed image reconstruction, analysis, and visualization pipelines for live-cell imaging datasets."
-    - "Tracked and quantified cell migration, proliferation, and morphology across 4K+ image frames."
-    - "Implemented image registration, feature extraction, and dimensionality reduction."
+    - "Implemented data preprocessing, feature extraction, and image registration across 4K+ image frames."
+    - "Integrated segmentation and tracking for predictive modeling of cell migration, proliferation, and morphology."
   weight: 2
 
 - year: "Summer 2023"
@@ -27,9 +26,9 @@
   supervisor: "Dr. Tomasz Nowakowski"
   location: "San Francisco, CA"
   points: 
-   - "Developed multimodal pipelines integrating histology, spatial transcriptomics, and single-cell RNA-sequencing."
-   - "Improved optimization, Bayesian, and contrastive learning models across 38K+ cells."
-   - "Distributed training across a GPU cluster, monitoring performance, logging metrics, and reducing train time."
+   - "Developed multimodal pipelines integrating histology, spatial transcriptomics, and single cell RNA sequencing."
+   - "Trained, improved, and benchmarked optimization, Bayesian, and contrastive learning models across 38K+ cells."
+   - "Distributed training across a GPU cluster, logging metrics, monitoring performance, and tuning hyperparameters."
   weight: 3
 
 - year: "Summer 2019"
@@ -38,5 +37,6 @@
   supervisor: "Dr. Julia Sbierski-Kind"
   location: "San Francisco, CA"
   points:
-    - "Analyzed in vivo cell–cell interactions in mouse models of immune and metabolic disorders."
+    - "Analyzed in vivo stromal–immune cell interactions in mouse models of obesity and liver fibrosis."
+    - "Applied confocal microscopy, flow cytometry, and histological techniques for data analysis."
   weight: 4
