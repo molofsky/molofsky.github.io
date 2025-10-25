@@ -88,14 +88,14 @@ const work = (projects as any[]).sort((a,b)=>(a.weight??999)-(b.weight??999));
   </div>
 </section>
 
-<!-- Bio -->
+<!-- BIO -->
 <section id="bio" data-spy="section" class="py-15 scroll-mt-24">
   <div class="mx-auto max-w-screen-xl px-6">
     <h2 class="text-[2rem] md:text-[2.25rem] font-semibold text-neutral-900 tracking-tight">
       Bio
     </h2>
 
-    <div class="mt-2 space-y-4">
+    <div class="mt-2 space-y-4 pl-10">
       <p class="text-[18.5px] md:text-[19px] text-neutral-800 leading-7">
         I am an M.S. and B.S. student in <a href="https://www.cs.stanford.edu/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Computer Science</a> at <a href="https://www.stanford.edu/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Stanford University</a> advised by
         <a href="https://en.wikipedia.org/wiki/Mark_Alan_Horowitz" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Dr. Mark Horowitz</a>.  I am particularly interested in leveraging large-scale distributed systems to accelerate training and inference for deep learning models. My research is focused on improving the reliability and mechanistic interpretability of machine learning systems, developing data-centric approaches for offline reinforcement learning and imitation learning, and advancing multimodal visual understanding with applications in biomedicine and neuroscience.
@@ -120,7 +120,7 @@ const work = (projects as any[]).sort((a,b)=>(a.weight??999)-(b.weight??999));
       Experience
     </h2>
 
-    <div class="mt-0">
+    <div class="mt-0 pl-10">
       {experience.map((e:any) => (
         <article class="py-7 border-b border-neutral-200">
           <!-- Left grows, right stays auto width -->
@@ -162,7 +162,7 @@ const work = (projects as any[]).sort((a,b)=>(a.weight??999)-(b.weight??999));
       Projects
     </h2>
 
-    <div class="mt-8 grid gap-7 grid-cols-[repeat(auto-fill,minmax(320px,1fr))]">
+    <div class="mt-8 pl-10 grid gap-7 grid-cols-[repeat(auto-fill,minmax(320px,1fr))]">
       {work.map((p:any) => (
         <a
           href={p.link ?? "#"}
@@ -185,6 +185,12 @@ const work = (projects as any[]).sort((a,b)=>(a.weight??999)-(b.weight??999));
     </div>
   </div>
 </section>
+
+<footer class="mt-20 py-6 text-center text-neutral-600 text-[16px] hover:text-[var(--stanford-cardinal)] transition-colors">
+  <p>
+    © Adrian Molofsky {new Date().getFullYear()}.
+  </p>
+</footer>
 
   </body>
 </html>
