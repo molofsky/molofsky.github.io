@@ -35,81 +35,112 @@ const nav = [
 
   <!-- Inline scroll-spy + init script -->
   <script type="module">
-    // ---- scroll-spy.ts ----
-    let _installed = false;
+  let _installed = false;
 
-    function initScrollSpy() {
-      if (_installed) return; // idempotent
-      _installed = true;
+  function initScrollSpy() {
+    if (_installed) return;
+    _installed = true;
 
-      const sections = Array.from(
-        document.querySelectorAll('section[id][data-spy="section"]')
-      );
-      const linkMap = new Map();
+    const sections = Array.from(
+      document.querySelectorAll('section[id][data-spy="section"]')
+    );
+    const linkMap = new Map();
 
-      document.querySelectorAll('a[data-scrollspy]').forEach((a) => {
+    document.querySelectorAll('a[data-scrollspy]').forEach((a) => {
+      const href = a.getAttribute('href') || '';
+      if (href.startsWith('#')) linkMap.set(href.slice(1), a);
+    });
+
+    const setActive = (id) => {
+      linkMap.forEach((a) => a.setAttribute('data-active', 'false'));
+      if (id && linkMap.get(id)) linkMap.get(id).setAttribute('data-active', 'true');
+    };
+
+    const getOffsetTop = (el) => {
+      let top = 0, node = el;
+      while (node) {
+        top += node.offsetTop || 0;
+        node = node.offsetParent;
+      }
+      return top;
+    };
+
+    let tops = [];
+    const recompute = () => {
+      tops = sections.map((s) => ({ id: s.id, top: getOffsetTop(s) }));
+      tops.sort((a, b) => a.top - b.top);
+    };
+    recompute();
+
+    // Slightly lower focus line for bottom sections, but not too low
+    const FOCUS_RATIO = 0.30;
+
+    // Click lock so the clicked item stays active while the browser scrolls
+    let lockedId = null;
+    let lockedUntil = 0;
+    const lockTo = (id, ms = 700) => {
+      lockedId = id;
+      lockedUntil = Date.now() + ms;
+      setActive(id);
+    };
+
+    document.querySelectorAll('a[data-scrollspy]').forEach((a) => {
+      a.addEventListener('click', () => {
         const href = a.getAttribute('href') || '';
-        if (href.startsWith('#')) linkMap.set(href.slice(1), a);
-      });
+        if (href.startsWith('#')) lockTo(href.slice(1));
+      }, { passive: true });
+    });
 
-      const setActive = (id) => {
-        linkMap.forEach((a) => a.setAttribute('data-active', 'false'));
-        if (id && linkMap.get(id)) linkMap.get(id).setAttribute('data-active', 'true');
-      };
+    const update = () => {
+      // honor lock during smooth scroll
+      if (lockedId && Date.now() < lockedUntil) {
+        setActive(lockedId);
+        return;
+      } else if (lockedId && Date.now() >= lockedUntil) {
+        lockedId = null;
+      }
 
-      const getOffsetTop = (el) => {
-        let top = 0;
-        let node = el;
-        while (node) {
-          top += node.offsetTop || 0;
-          node = node.offsetParent;
-        }
-        return top;
-      };
+      const focusY = window.scrollY + window.innerHeight * FOCUS_RATIO;
 
-      let tops = [];
-      const recompute = () => {
-        tops = sections.map((s) => ({ id: s.id, top: getOffsetTop(s) }));
-        tops.sort((a, b) => a.top - b.top);
-      };
-      recompute();
+      // NEW: If the focus line is still above the first section (e.g., hero area),
+      // clear all highlights so nothing is active.
+      if (tops.length && focusY < tops[0].top - 1) {
+        setActive(null);
+        return;
+      }
 
-      const FOCUS_RATIO = 0.30; // 30% down from viewport top
+      // Bottom clamp: if basically at the end, force the last section
+      const nearBottom =
+        window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
+      if (nearBottom && tops.length) {
+        setActive(tops[tops.length - 1].id);
+        return;
+      }
 
-      const update = () => {
-        const focusY = window.scrollY + window.innerHeight * FOCUS_RATIO;
-        let currentId = undefined;
-        for (const s of tops) {
-          if (focusY >= s.top) currentId = s.id;
-          else break;
-        }
-        setActive(currentId);
-      };
+      // Normal selection
+      let currentId = undefined;
+      for (const s of tops) {
+        if (focusY >= s.top) currentId = s.id;
+        else break;
+      }
+      setActive(currentId);
+    };
 
-      update();
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', () => { recompute(); update(); });
 
-      window.addEventListener('scroll', update, { passive: true });
-      window.addEventListener('resize', () => {
-        recompute();
-        update();
-      });
+    window.addEventListener('hashchange', () => {
+      const id = location.hash.replace('#', '');
+      if (id) lockTo(id, 700);
+      requestAnimationFrame(() => { recompute(); update(); });
+    });
 
-      window.addEventListener('hashchange', () => {
-        requestAnimationFrame(() => {
-          recompute();
-          update();
-        });
-      });
+    window.addEventListener('load', () => { recompute(); update(); });
+  }
 
-      window.addEventListener('load', () => {
-        recompute();
-        update();
-      });
-    }
-
-    // ---- init-scrollspy-client.ts ----
-    window.addEventListener('astro:page-load', () => initScrollSpy());
-    window.addEventListener('DOMContentLoaded', () => initScrollSpy());
-    initScrollSpy();
-  </script>
+  window.addEventListener('astro:page-load', () => initScrollSpy());
+  window.addEventListener('DOMContentLoaded', () => initScrollSpy());
+  initScrollSpy();
+</script>
 </header>

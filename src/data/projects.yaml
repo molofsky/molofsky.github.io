@@ -1,65 +1,64 @@
 
 - title: "Comparing Reinforcement Learning Methods for Sparse vs. Dense Rewards"
-  summary: "Benchmarked PPO, DDPG, SAC, and TD3 policies on a 1,000 sample states from the Point Maze environment. Achieved 30% higher rewards with transfer learning and 16× faster convergence in wall time with PPO than TD3."
+  summary: "Benchmarked PPO, DDPG, SAC, and TD3 policies on a 1,000 sample states from the Point Maze environment."
   highlight: ""
   link: "https://github.com/AdrS/cs234-project"
   linkText: "View Code"
   weight: 1
 
 - title: "Link Prediction on MIND Dataset with PyG"
-  summary: "Built a graph neural network on the Microsoft News Dataset (MIND) using GraphSAGE, LightGCN, and GAT layers. Achieved 0.984 AUC-ROC with GAT, improving recall by 95% over LightGCN and 4% over GraphSAGE."
+  summary: "Built a graph neural network recommender system on the Microsoft News Dataset (MIND) to learn user-article click behavior. "
   highlight: ""
   link: "https://medium.com/stanford-cs224w/link-prediction-on-mind-dataset-with-pyg-5ade4214f823"
   linkText: "View Report"
   weight: 2
 
 - title: "Price-Pure Prediction of Daily Price Changes in Binary Event Contracts"
-  summary: "Forecasted daily price changes in binary event contracts backtesting on 10K+ time-series samples from Kalshi. Demonstrated that CatBoost improved prediction accuracy by 55% over baseline linear regression."
+  summary: "Forecasted daily price changes in binary event contracts backtesting on 10K+ time-series samples from Kalshi. "
   highlight: ""
   link: "https://github.com/molofsky/forecasting-kalshi"
   linkText: "View Code"
   weight: 3
 
 - title: "Convolutional Neural Network Accelerator"
-  summary: "Developed a ResNet-18 hardware accelerator with a systolic array, FIFO buffering, and tiled address generation. Achieved 3.7× higher throughput, 4× lower power, 2× area reduction, and best Figure of Merit."
+  summary: "Developed a ResNet-18 hardware accelerator with a systolic array, FIFO buffering, and banked memory hierarchy."
   highlight: ""
   link: ""
   linkText: ""
   weight: 4
 
-- title: "Rasterization Accelerator"
-  summary: "Designed a rasterization hardware accelerator with micropolygon bounding, edge traversal, and pixel sampling. Achieved 2× higher throughput and 1.75× higher frequency through backface culling and clock-gating optimizations."
+
+- title: "Micropolygon Rasterization Accelerator"
+  summary: "Designed a rasterization hardware accelerator with micropolygon bounding, edge traversal, and backface culling."
   highlight: ""
   link: ""
   linkText: ""
   weight: 5
 
+- title: "Five-Stage Pipelined MIPS Processor"
+  summary: "Developed a five-stage pipelined processor for the MIPS ISA with hazard detection, forwarding, and stall control."
+  highlight: ""
+  link: ""
+  linkText: ""
+  weight: 6
+
 - title: "Register Renaming in a RISC-V Processor"
-  summary: "Implemented register renaming logic in a pipelined RISC-V processor to eliminate write-after-write and write-after-read hazards."
-  highlight: ""
-  link: ""
-  linkText: ""
-  weight: 6
-
-
-- title: "Formalizing Intel’s Remote Action Request"
-  summary: "Defined an ISA-level memory consistency model for Intel’s Remote Action Request and ran 244 litmus tests, uncovering 27 counterexamples exposing concurrency and load-ordering hazards."
-  highlight: ""
-  link: ""
-  linkText: ""
-  weight: 6
-
-
-- title: "Performance Tradeoffs of Error-Correcting Codes within Network Routers"
-  summary: "Simulated parity, checksum, and Hamming error-correcting codes in 8×8 2D Torus routers. Showed parity reduced delivery rate by 12% and checksum incurred 25% bandwidth overhead."
+  summary: "Implemented register renaming logic in a pipelined RISC-V processor to eliminate write after write and write after read hazards."
   highlight: ""
   link: ""
   linkText: ""
   weight: 7
 
-- title: "Five-Stage Pipelined MIPS Processor"
-  summary: "Developed a five-stage pipelined processor implementing the MIPS ISA with hazard detection, forwarding, and stall control. Synthesized on FPGA to perform real-time edge detection using a Sobel filter."
+- title: "Performance Tradeoffs of Error-Correcting Codes within Network Routers"
+  summary: "Benchmarked parity, checksum, and Hamming error-correcting codes in 8×8 2D Torus routers using BookSim."
   highlight: ""
+  link: ""
+  linkText: ""
+  weight: 8
+
+
+- title: "Formalizing Intel’s Remote Action Request"
+  summary: "Defined Intel’s Remote Action Request for remote TLB shootdowns through memory transiency models."
   link: ""
   linkText: ""
   weight: 9
