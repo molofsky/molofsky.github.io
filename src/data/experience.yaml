@@ -5,7 +5,7 @@
   location: "Stanford, CA"
   points:
     - "Developed an end-to-end pipeline for training, evaluating, testing, and deploying deep learning models."
-    - "Improved inference and memory efficiency across 165K+ patch embeddings representing immune cell behavior."
+    - "Improved inference and reduced memory overhead across 165K+ patch embeddings modeling immune cell behavior."
     - "Distributed training across a GPU cluster, managing job scheduling, resource allocation, and cluster configuration."
   weight: 1
 
