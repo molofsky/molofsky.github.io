@@ -54,14 +54,29 @@ const work = (projects as any[]).sort((a,b)=>(a.weight??999)-(b.weight??999));
           <path d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6zm2 0v.01L12 13l8-6.99V6H4zm0 12h16V8l-8 6-8-6v10z"/>
         </svg>
       </a>
+
+      <!-- X (Twitter) -->
+      <a href="https://twitter.com/adrianmolofsky" target="_blank" rel="noopener"
+        class="transition-transform hover:scale-110" aria-label="Twitter / X" title="Twitter / X">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227"
+            class="w-10 h-10 fill-[var(--stanford-grey)] hover:fill-[var(--stanford-cardinal)] transition-colors duration-300">
+          <path d="M714.163 519.284L1160.89 0h-106.4L667.137 450.887
+                  347.724 0H0l463.352 678.748L0 1226.62h106.4l417.052-482.744
+                  336.499 482.744H1200L714.163 519.284zM567.844 676.886
+                  l-48.323-69.217L145.097 79.706h165.336l309.848 443.27
+                  48.323 69.217 400.65 573.091H903.918L567.844 676.886z"/>
+        </svg>
+      </a>
+
       <!-- LinkedIn -->
       <a href="https://www.linkedin.com/in/molofsky/" target="_blank" rel="noopener"
-   class="transition-transform hover:scale-110" aria-label="LinkedIn" title="LinkedIn">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34"
-       class="w-10 h-10 fill-[var(--stanford-grey)] hover:fill-[var(--stanford-cardinal)] transition-colors duration-300">
-    <path d="M34,2.5v29A2.5,2.5,0,0,1,31.5,34H2.5A2.5,2.5,0,0,1,0,31.5V2.5A2.5,2.5,0,0,1,2.5,0h29A2.5,2.5,0,0,1,34,2.5ZM10.06,29.5V13.17H4.76V29.5ZM7.41,10.63a3.08,3.08,0,1,0-3.08-3.08A3.08,3.08,0,0,0,7.41,10.63ZM29.5,29.5V20.12c0-5.04-2.7-7.38-6.31-7.38a5.46,5.46,0,0,0-5,2.75h-.07V13.17H12.93V29.5h5.25V20.89c0-2.27.43-4.46,3.25-4.46s3.28,2.47,3.28,4.62V29.5Z"/>
-  </svg>
-</a>
+        class="transition-transform hover:scale-110" aria-label="LinkedIn" title="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34"
+            class="w-10 h-10 fill-[var(--stanford-grey)] hover:fill-[var(--stanford-cardinal)] transition-colors duration-300">
+          <path d="M34,2.5v29A2.5,2.5,0,0,1,31.5,34H2.5A2.5,2.5,0,0,1,0,31.5V2.5A2.5,2.5,0,0,1,2.5,0h29A2.5,2.5,0,0,1,34,2.5ZM10.06,29.5V13.17H4.76V29.5ZM7.41,10.63a3.08,3.08,0,1,0-3.08-3.08A3.08,3.08,0,0,0,7.41,10.63ZM29.5,29.5V20.12c0-5.04-2.7-7.38-6.31-7.38a5.46,5.46,0,0,0-5,2.75h-.07V13.17H12.93V29.5h5.25V20.89c0-2.27.43-4.46,3.25-4.46s3.28,2.47,3.28,4.62V29.5Z"/>
+        </svg>
+      </a>
+
       <!-- GitHub -->
       <a href="https://github.com/molofsky" target="_blank" rel="noopener"
          class="transition-transform hover:scale-110" aria-label="GitHub" title="GitHub">
@@ -81,7 +96,16 @@ const work = (projects as any[]).sort((a,b)=>(a.weight??999)-(b.weight??999));
             0 .324.19.699.8.58C20.565 21.795 24 17.308 24 12c0-6.63-5.373-12-12-12z"/>
         </svg>
       </a>
-    </div>
+
+      <!-- Google Scholar -->
+      <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=mvzNY5oAAAAJ" target="_blank" rel="noopener"
+        class="transition-transform hover:scale-110" aria-label="Google Scholar" title="Google Scholar">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            class="w-10 h-10 fill-[var(--stanford-grey)] hover:fill-[var(--stanford-cardinal)] transition-colors duration-300">
+          <path d="M12 2L1 8l11 6 9-4.91V17h2V8L12 2z"/>
+          <path d="M11 14.98l-7.5-4.09V15c0 2.21 3.58 4 8 4s8-1.79 8-4v-4.11l-7.5 4.09z"/>
+        </svg>
+      </a>
   </div>
 </section>
 
@@ -101,7 +125,7 @@ const work = (projects as any[]).sort((a,b)=>(a.weight??999)-(b.weight??999));
       </p>
 
        <p class="text-[18.5px] md:text-[19px] text-neutral-800 leading-7">
-         I am broadly interested in the reliability and interpretability of machine learning systems, data-centric approaches for offline reinforcement learning and imitation learning, and multimodal visual understanding with applications in computer vision, biomedicine, and neuroscience.
+         My research focuses on the reliability and interpretability of machine learning systems, data-centric approaches for offline reinforcement learning and imitation learning, and multimodal visual understanding with applications in computer vision, biomedicine, and neuroscience.
       </p>
 
       <p class="text-[18.5px] md:text-[19px] text-neutral-800 leading-7">
@@ -194,7 +218,7 @@ const work = (projects as any[]).sort((a,b)=>(a.weight??999)-(b.weight??999));
 
     <div class="mt-2 space-y-4 pl-10 pr-10">
       <p class="text-[18.5px] md:text-[19px] text-neutral-800 leading-7">
-        If you are a high school or college student from a low-income or underrepresented background seeking advice on college applications, career planning, or research opportunities, please send me an email. 
+        If you are a high school or college student from a low-income or underrepresented background seeking advice on college applications, career planning, or research opportunities, please shoot me an email. 
       </p>
 
       <p class="text-[18.5px] md:text-[19px] text-neutral-800 leading-7">
