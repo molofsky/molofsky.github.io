@@ -15,17 +15,25 @@ const experience = (exp as any[]).sort((a,b)=>(a.weight??999)-(b.weight??999));
 const work = (projects as any[]).sort((a,b)=>(a.weight??999)-(b.weight??999));
 ---
 
+
 <link rel="stylesheet" href="/fonts/cm/Serif/cmun-serif.css" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Adrian Molofsky</title>
     <meta name="description" content="AI & Systems @ Stanford — Portfolio of Adrian Molofsky" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
 
   <body class="text-neutral-900 bg-white">
     <Header />
+
 
     <!-- HERO: full screen, centered -->
     <section id="hero" class="min-h-screen w-screen flex items-center justify-center bg-white">
@@ -98,13 +106,18 @@ const work = (projects as any[]).sort((a,b)=>(a.weight??999)-(b.weight??999));
       </a>
 
       <!-- Google Scholar -->
-      <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=mvzNY5oAAAAJ" target="_blank" rel="noopener"
-        class="transition-transform hover:scale-110" aria-label="Google Scholar" title="Google Scholar">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-            class="w-10 h-10 fill-[var(--stanford-grey)] hover:fill-[var(--stanford-cardinal)] transition-colors duration-300">
-          <path d="M12 2L1 8l11 6 9-4.91V17h2V8L12 2z"/>
-          <path d="M11 14.98l-7.5-4.09V15c0 2.21 3.58 4 8 4s8-1.79 8-4v-4.11l-7.5 4.09z"/>
-        </svg>
+      <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=mvzNY5oAAAAJ"
+        target="_blank" rel="noopener"
+        class="transition-transform hover:scale-110"
+        aria-label="Google Scholar" title="Google Scholar">
+        <span
+          class="w-10 h-10 flex items-center justify-center
+                text-[var(--stanford-grey)]
+                hover:text-[var(--stanford-cardinal)]
+                text-3xl transition-colors duration-300"
+        >
+          <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+        </span>
       </a>
   </div>
 </section>
@@ -118,10 +131,8 @@ const work = (projects as any[]).sort((a,b)=>(a.weight??999)-(b.weight??999));
 
     <div class="mt-2 space-y-4 pl-10 pr-10">
       <p class="text-[18.5px] md:text-[19px] text-neutral-800 leading-7">
-         Hi! I am an M.S. and B.S. student in <a href="https://www.cs.stanford.edu/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Computer Science</a> at <a href="https://www.stanford.edu/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Stanford University</a> advised by
-        <a href="https://en.wikipedia.org/wiki/Mark_Alan_Horowitz" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Dr. Mark Horowitz</a>. 
-      </p>
-
+         I am currently an M.S. and B.S. student in <a href="https://www.cs.stanford.edu/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Computer Science</a> at <a href="https://www.stanford.edu/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Stanford University</a> advised by
+        <a href="https://en.wikipedia.org/wiki/Mark_Alan_Horowitz" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Dr. Mark Horowitz</a>. My research focuses on understanding the behavior of machine learning systems through data-centric AI. I am broadly interested in empirical and statistical machine learning.
       <p class="text-[18.5px] md:text-[19px] text-neutral-800 leading-7">
          I recently spent a year as a research assistant at Stanford studying imitation learning for coordination modeling of immune cell behavior supervised by <a href="https://en.wikipedia.org/wiki/Barbara_Engelhardt" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Dr. Barbara Engelhardt</a>.
          Previously, I was a research intern twice at UC San Francisco reconstructing gene expression in the developing human embryo supervised by <a href="https://bms.ucsf.edu/people/tomasz-nowakowski-phd" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Dr. Tomasz Nowakowski</a>
@@ -133,12 +144,6 @@ const work = (projects as any[]).sort((a,b)=>(a.weight??999)-(b.weight??999));
 <a href="https://en.wikipedia.org/wiki/Arcata,_California" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">  Arcata</a> and grew up in 
 <a href="https://en.wikipedia.org/wiki/McKinleyville,_California" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline"> McKinleyville</a> near the redwoods of Northern California. In my free time, I enjoy spending time outdoors backpacking,
        birdwatching, and swimming, and playing strategy games such as chess, bridge, and poker.
-      </p>
-
-       <p class="text-[18.5px] md:text-[19px] text-neutral-800 leading-7">
-        My goal is to build machine learning systems that are fair, robust, and interpretable. I am interested in how models learn from data, reason across multiple input modalities,
-        and develop resilience to outliers. I am currently thinking about data-centric approaches to improve robustness, adaptive test-time reasoning for reliable inference, 
-        and methods for generalizing models to out-of-domain tasks.
       </p>
 
     </div>
@@ -214,25 +219,6 @@ const work = (projects as any[]).sort((a,b)=>(a.weight??999)-(b.weight??999));
           )}
         </a>
       ))}
-    </div>
-  </div>
-</section>
-
-<!-- Mentorship -->
-<section id="mentorship" data-spy="section" class="py-15 scroll-mt-24">
-  <div class="mx-auto max-w-screen-xl px-6">
-    <h2 class="text-[2rem] md:text-[2.25rem] font-semibold text-neutral-900 tracking-tight">
-      Mentorship
-    </h2>
-
-    <div class="mt-2 space-y-4 pl-10 pr-10">
-      <p class="text-[18.5px] md:text-[19px] text-neutral-800 leading-7">
-        If you are a high school or college student from a low-income or underrepresented background seeking advice on college applications, career planning, or research opportunities, please shoot me an email. 
-      </p>
-
-      <p class="text-[18.5px] md:text-[19px] text-neutral-800 leading-7">
-        I am committed to increasing diversity and inclusion across computer science and higher education.
-      </p>
     </div>
   </div>
 
