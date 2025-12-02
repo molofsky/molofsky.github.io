@@ -4,7 +4,7 @@
   supervisor: "Dr. Barbara Engelhardt"
   location: "Stanford, CA"
   points:
-    - "Developed an end-to-end pipeline for training, evaluating, testing, and deploying deep learning models."
+    - "Developed end-to-end pipelines for training, evaluating, testing, and deploying deep learning models."
     - "Improved data curation and inference across 165K+ patch embeddings representing immune cell behavior."
     - "Distributed training across multiple GPUs, managing job scheduling, resource allocation, and data orchestration."
   weight: 1
