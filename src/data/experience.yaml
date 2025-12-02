@@ -26,7 +26,7 @@
   supervisor: "Dr. Tomasz Nowakowski"
   location: "San Francisco, CA"
   points: 
-   - "Developed multimodal pipelines integrating histology, spatial transcriptomics, and single cell RNA sequencing."
+   - "Developed multimodal pipelines integrating histology, spatial transcriptomics, and single-cell RNA sequencing."
    - "Trained, improved, and benchmarked optimization, Bayesian, and contrastive learning models across 38K+ cells."
    - "Distributed training across multiple GPUs, configuring jobs, logging metrics, and tuning hyperparameters."
   weight: 3
