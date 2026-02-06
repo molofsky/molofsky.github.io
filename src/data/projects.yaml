@@ -20,45 +20,51 @@
   linkText: "View Code"
   weight: 3
 
-- title: "Convolutional Neural Network Accelerator"
-  summary: "Developed a ResNet-18 hardware accelerator with a systolic array, FIFO buffering, and banked memory hierarchy."
+- title: "Transformer Language Model"
+  summary: "Built a language model with custom optimization kernels, distributed training, and profiling."
   highlight: ""
   link: ""
   linkText: ""
   weight: 4
 
+- title: "Convolutional Neural Network Accelerator"
+  summary: "Developed a ResNet-18 hardware accelerator with a systolic array and banked memory hierarchy."
+  highlight: ""
+  link: ""
+  linkText: ""
+  weight: 5
 
 - title: "Micropolygon Rasterization Accelerator"
   summary: "Designed a rasterization hardware accelerator with micropolygon bounding, edge traversal, and backface culling."
   highlight: ""
   link: ""
   linkText: ""
-  weight: 5
+  weight: 6
 
 - title: "Five-Stage Pipelined MIPS Processor"
   summary: "Developed a five-stage pipelined processor for the MIPS ISA with hazard detection, forwarding, and stall control."
   highlight: ""
   link: ""
   linkText: ""
-  weight: 6
+  weight: 7
 
 - title: "Register Renaming in a RISC-V Processor"
   summary: "Implemented register renaming logic in a pipelined RISC-V processor to eliminate write after write and write after read hazards."
   highlight: ""
   link: ""
   linkText: ""
-  weight: 7
+  weight: 8
 
 - title: "Performance Tradeoffs of Error-Correcting Codes within Network Routers"
   summary: "Benchmarked parity, checksum, and Hamming error-correcting codes in 8×8 2D Torus routers using BookSim."
   highlight: ""
   link: ""
   linkText: ""
-  weight: 8
+  weight: 9
 
 
 - title: "Formalizing Intel’s Remote Action Request"
   summary: "Defined Intel’s Remote Action Request for remote TLB shootdowns through memory transiency models."
   link: ""
   linkText: ""
-  weight: 9
+  weight: 10

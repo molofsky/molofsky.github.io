@@ -4,9 +4,9 @@
   supervisor: "Dr. Barbara Engelhardt"
   location: "Stanford, CA"
   points:
-    - "Developed end-to-end pipelines for training, evaluating, testing, and deploying deep learning models."
+    - "Developed end-to-end pipelines for training, evaluating, testing, and deploying machine learning models."
     - "Improved data curation and inference across 165K+ patch embeddings representing immune cell behavior."
-    - "Distributed training across multiple GPUs, managing job scheduling, resource allocation, and data orchestration."
+    - "Distributed training and managed job scheduling, resource allocation, and data orchestration."
   weight: 1
 
 - year: "Summer 2024"
@@ -17,7 +17,7 @@
   points:
     - "Developed image reconstruction, analysis, and visualization pipelines for live-cell imaging datasets."
     - "Implemented data preprocessing, feature extraction, and image registration across 4K+ image frames."
-    - "Integrated segmentation and tracking for predictive modeling of cell migration, proliferation, and morphology."
+    - "Integrated segmentation and tracking for modeling cell migration, proliferation, and morphology."
   weight: 2
 
 - year: "Summer 2023"
@@ -28,7 +28,7 @@
   points: 
    - "Developed multimodal pipelines integrating histology, spatial transcriptomics, and single-cell RNA sequencing."
    - "Trained, improved, and benchmarked optimization, Bayesian, and contrastive learning models across 38K+ cells."
-   - "Distributed training across multiple GPUs, configuring jobs, logging metrics, and tuning hyperparameters."
+   - "Distributed training, configured jobs, logged metrics, and tuned hyperparameters."
   weight: 3
 
 - year: "Summer 2019"
