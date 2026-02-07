@@ -68,3 +68,16 @@
   link: ""
   linkText: ""
   weight: 10
+
+
+- title: "Cool Compiler"
+  summary: "Developed a compiler for the Cool programming language with lexical analysis, parsing, semantic analysis, and MIPS code generation."
+  link: ""
+  linkText: ""
+  weight: 11
+
+- title: "Pintos OS"
+  summary: "Built an operating system with thread scheduling, user program execution, virtual memory, and file systems. "
+  link: ""
+  linkText: ""
+  weight: 12

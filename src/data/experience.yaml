@@ -1,13 +1,22 @@
+- year: "2026 - Current"
+  title: "AI Safety Researcher"
+  company: "Supervised Program for Alignment Research"
+  supervisor: "Dr. Justin Shenk"
+  location: "Berkeley, CA"
+  points:
+    - "Building probes to detect long-term planning in LLM activations for deceptive alignment oversight."
+    - "Testing cross-model generalization and detecting when models' internal reasoning diverges from stated goals."
+  weight: 1
+
 - year: "2024 - 2025"
-  title: "Research Assistant"
+  title: "Machine Learning Researcher"
   company: "Stanford University"
   supervisor: "Dr. Barbara Engelhardt"
   location: "Stanford, CA"
   points:
     - "Developed end-to-end pipelines for training, evaluating, testing, and deploying machine learning models."
-    - "Improved data curation and inference across 165K+ patch embeddings representing immune cell behavior."
     - "Distributed training and managed job scheduling, resource allocation, and data orchestration."
-  weight: 1
+  weight: 2
 
 - year: "Summer 2024"
   title: "Data Science Intern"
@@ -15,21 +24,19 @@
   supervisor: "Dr. Barbara Engelhardt"
   location: "San Francisco, CA"
   points:
-    - "Developed image reconstruction, analysis, and visualization pipelines for live-cell imaging datasets."
+    - "Developed image reconstruction, analysis, and visualization pipelines time-lapse microscopy datasets."
     - "Implemented data preprocessing, feature extraction, and image registration across 4K+ image frames."
-    - "Integrated segmentation and tracking for modeling cell migration, proliferation, and morphology."
-  weight: 2
+  weight: 3
 
 - year: "Summer 2023"
   title: "Research Intern"
   company: "University of California, San Francisco"
   supervisor: "Dr. Tomasz Nowakowski"
   location: "San Francisco, CA"
-  points: 
-   - "Developed multimodal pipelines integrating histology, spatial transcriptomics, and single-cell RNA sequencing."
-   - "Trained, improved, and benchmarked optimization, Bayesian, and contrastive learning models across 38K+ cells."
-   - "Distributed training, configured jobs, logged metrics, and tuned hyperparameters."
-  weight: 3
+  points:
+    - "Developed multimodal pipelines integrating histology, spatial transcriptomics, and single-cell RNA sequencing."
+    - "Distributed training, configured jobs, logged metrics, and tuned hyperparameters."
+  weight: 4
 
 - year: "Summer 2019"
   title: "Research Intern"
@@ -37,6 +44,5 @@
   supervisor: "Dr. Julia Sbierski-Kind"
   location: "San Francisco, CA"
   points:
-    - "Examined stromal–immune cell interactions in the context of insulin resistance, steatohepatitis, and liver fibrosis."
-    - "Applied confocal microscopy, flow cytometry, and histological techniques to analyze cellular behavior."
-  weight: 4
+    - "Analyzed stromal–immune cell interactions using confocal microscopy, flow cytometry, and histological data."
+  weight: 5
