@@ -24,7 +24,7 @@
   supervisor: "Dr. Barbara Engelhardt"
   location: "San Francisco, CA"
   points:
-    - "Developed image reconstruction, analysis, and visualization pipelines time-lapse microscopy datasets."
+    - "Developed image reconstruction, analysis, and visualization pipelines for time-lapse microscopy."
     - "Implemented data preprocessing, feature extraction, and image registration across 4K+ image frames."
   weight: 3
 
