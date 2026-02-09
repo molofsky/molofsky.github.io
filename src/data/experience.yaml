@@ -5,7 +5,7 @@
   location: "Berkeley, CA"
   points:
     - "Building probes to detect long-term planning in LLM activations for deceptive alignment oversight."
-    - "Testing cross-model generalization and detecting when models' internal reasoning diverges from stated goals."
+    - "Testing cross-model generalization and detecting inconsistencies in model reasoning."
   weight: 1
 
 - year: "2024 - 2025"
@@ -35,7 +35,7 @@
   location: "San Francisco, CA"
   points:
     - "Developed multimodal pipelines integrating histology, spatial transcriptomics, and single-cell RNA sequencing."
-    - "Distributed training, configured jobs, logged metrics, and tuned hyperparameters."
+    - " Distributed training, configured jobs, logged metrics, profiled code, and tuned hyperparameters."
   weight: 4
 
 - year: "Summer 2019"

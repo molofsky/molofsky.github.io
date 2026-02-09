@@ -21,14 +21,14 @@
   weight: 3
 
 - title: "Transformer Language Model"
-  summary: "Built a language model with custom optimization kernels, distributed training, and profiling."
+  summary: "Built a language model with Triton kernels, distributed data parallel training, and optimizer state sharding."
   highlight: ""
   link: ""
   linkText: ""
   weight: 4
 
 - title: "Convolutional Neural Network Accelerator"
-  summary: "Developed a ResNet-18 hardware accelerator with a systolic array and banked memory hierarchy."
+  summary: "Developed a ResNet-18 hardware accelerator with a systolic array, synthesis, floorplanning, PnR, and signoff."
   highlight: ""
   link: ""
   linkText: ""
