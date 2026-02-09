@@ -1,8 +1,8 @@
 
-- title: "Comparing Reinforcement Learning Methods for Sparse vs. Dense Rewards"
-  summary: "Benchmarked PPO, DDPG, SAC, and TD3 policies on a 1,000 sample states from the Point Maze environment."
+- title: "Price-Pure Prediction of Daily Price Changes in Binary Event Contracts"
+  summary: "Forecasted daily price changes in binary event contracts backtesting on 10K+ time-series samples from Kalshi. "
   highlight: ""
-  link: "https://github.com/AdrS/cs234-project"
+  link: "https://github.com/molofsky/forecasting-kalshi"
   linkText: "View Code"
   weight: 1
 
@@ -13,10 +13,10 @@
   linkText: "View Report"
   weight: 2
 
-- title: "Price-Pure Prediction of Daily Price Changes in Binary Event Contracts"
-  summary: "Forecasted daily price changes in binary event contracts backtesting on 10K+ time-series samples from Kalshi. "
+- title: "Comparing Reinforcement Learning Methods for Sparse vs. Dense Rewards"
+  summary: "Benchmarked PPO, DDPG, SAC, and TD3 policies on a 1,000 sample states from the Point Maze environment."
   highlight: ""
-  link: "https://github.com/molofsky/forecasting-kalshi"
+  link: "https://github.com/AdrS/cs234-project"
   linkText: "View Code"
   weight: 3
 
