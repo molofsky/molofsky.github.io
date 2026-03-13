@@ -4,9 +4,19 @@
   supervisor: "Dr. Justin Shenk"
   location: "Berkeley, CA"
   points:
-    - "Building probes to detect long-term planning in LLM activations for deceptive alignment oversight."
-    - "Testing cross-model generalization and detecting inconsistencies in model reasoning."
+    - " Building interpretability infrastructure for monitoring long-horizon planning in LLM activations."
+    - "Designing tools for early detection of compliance degradation in extended task sequences."
   weight: 1
+
+- year: "2026 - Current"
+  title: "Visiting Researcher"
+  company: "Stanford University"
+  supervisor: "Dr. Ludwig Schmidt"
+  location: "Stanford, CA"
+  points:
+    - "Building infrastructure for Terminal-Bench 3.0, a benchmark for AI agents used by virtually every frontier lab."
+    - "Developing tasks for Terminal-Bench-Science, a benchmark for AI agents on real-world computational workflows."
+  weight: 2
 
 - year: "2024 - 2025"
   title: "Machine Learning Researcher"
@@ -16,7 +26,7 @@
   points:
     - "Developed end-to-end pipelines for training, evaluating, testing, and deploying machine learning models."
     - "Distributed training and managed job scheduling, resource allocation, and data orchestration."
-  weight: 2
+  weight: 3
 
 - year: "Summer 2024"
   title: "Data Science Intern"
@@ -26,7 +36,7 @@
   points:
     - "Developed image reconstruction, analysis, and visualization pipelines for time-lapse microscopy."
     - "Implemented data preprocessing, feature extraction, and image registration across 4K+ image frames."
-  weight: 3
+  weight: 4
 
 - year: "Summer 2023"
   title: "Research Intern"
@@ -36,7 +46,7 @@
   points:
     - "Developed multimodal models integrating single cell, spatial genomics, and histological data."
     - "Distributed training, configured jobs, logged metrics, and tuned hyperparameters."
-  weight: 4
+  weight: 5
 
 - year: "Summer 2019"
   title: "Research Intern"
@@ -45,4 +55,4 @@
   location: "San Francisco, CA"
   points:
     - "Analyzed stromal–immune cell interactions using confocal microscopy, flow cytometry, and histological data."
-  weight: 5
+  weight: 6
