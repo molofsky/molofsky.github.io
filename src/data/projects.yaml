@@ -1,13 +1,12 @@
-
 - title: "Price-Pure Prediction of Daily Price Changes in Binary Event Contracts"
-  summary: "Forecasted daily price changes in binary event contracts backtesting on 10K+ time-series samples from Kalshi. "
+  summary: "Forecasted daily price changes in binary event contracts backtesting on 10K+ time-series samples from Kalshi."
   highlight: ""
   link: "https://github.com/molofsky/forecasting-kalshi"
   linkText: "View Code"
   weight: 1
 
 - title: "Link Prediction on MIND Dataset with PyG"
-  summary: "Built a graph neural network recommender system on the Microsoft News Dataset (MIND) to learn user-article click behavior. "
+  summary: "Built a graph neural network user-article recommender system on the Microsoft News Dataset (MIND)."
   highlight: ""
   link: "https://medium.com/stanford-cs224w/link-prediction-on-mind-dataset-with-pyg-5ade4214f823"
   linkText: "View Report"
@@ -28,7 +27,7 @@
   weight: 4
 
 - title: "Convolutional Neural Network Accelerator"
-  summary: "Developed a ResNet-18 hardware accelerator with a systolic array, synthesis, floorplanning, PnR, and signoff."
+  summary: "Developed a ResNet-18 hardware accelerator through digital design, verification, synthesis, and physical design."
   highlight: ""
   link: ""
   linkText: ""
@@ -62,13 +61,11 @@
   linkText: ""
   weight: 9
 
-
-- title: "Formalizing Intel’s Remote Action Request"
-  summary: "Defined Intel’s Remote Action Request for remote TLB shootdowns through memory transiency models."
+- title: "Formalizing Intel's Remote Action Request"
+  summary: "Defined Intel's Remote Action Request for remote TLB shootdowns through memory transiency models."
   link: ""
   linkText: ""
   weight: 10
-
 
 - title: "Cool Compiler"
   summary: "Developed a compiler for the Cool programming language with lexical analysis, parsing, semantic analysis, and MIPS code generation."
@@ -77,7 +74,7 @@
   weight: 11
 
 - title: "Pintos OS"
-  summary: "Built an operating system with thread scheduling, user program execution, virtual memory, and file systems. "
+  summary: "Built an operating system with thread scheduling, user program execution, virtual memory, and file systems."
   link: ""
   linkText: ""
   weight: 12
