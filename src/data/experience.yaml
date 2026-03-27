@@ -5,7 +5,7 @@
   location: "Berkeley, CA"
   points:
     - "Building infrastructure for interpretability research on large language models."
-    - "Developing GPU kernels, profiling performance, and optimizing machine learning workloads."
+    - "Developing GPU kernels, architecting distributed inference, and optimizing machine learning workloads."
   weight: 1
 
 - year: "2024 - 2025"
