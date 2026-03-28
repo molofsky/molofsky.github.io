@@ -137,11 +137,11 @@ const work = (projects as any[]).sort((a,b)=>(a.weight??999)-(b.weight??999));
   </p>
   <p class="text-[18.5px] md:text-[19px] text-neutral-800 leading-7">
     I received my M.S. and B.S. in <a href="https://www.cs.stanford.edu/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Computer Science</a> from <a href="https://www.stanford.edu/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Stanford University</a>, with a minor in <a href="https://ee.stanford.edu/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Electrical Engineering</a>,
-    specializing in artificial intelligence and systems, advised by <a href="https://en.wikipedia.org/wiki/Mark_Alan_Horowitz" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Dr. Mark Horowitz</a>.     My graduate work focused on machine learning systems and my undergraduate work focused on performance engineering.
+    specializing in artificial intelligence and systems.     My graduate work focused on machine learning systems and my undergraduate work focused on performance engineering.
   </p>
   <p class="text-[18.5px] md:text-[19px] text-neutral-800 leading-7">
-    I spent a year as a machine learning researcher at Stanford and as a data science intern at Gladstone Institutes, supervised by <a href="https://en.wikipedia.org/wiki/Barbara_Engelhardt" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Dr. Barbara Engelhardt</a>.
-    Before that, I was a research intern twice at UC San Francisco, working under <a href="https://bms.ucsf.edu/people/tomasz-nowakowski-phd" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Dr. Tomasz Nowakowski</a> and <a href="https://www.medizin.uni-tuebingen.de/de/das-klinikum/mitarbeiter/profil/5212" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Dr. Julia Sbierski-Kind</a>.
+    I spent a year as a machine learning researcher at Stanford and as a data science intern at Gladstone Institutes.
+    Before that, I was a research intern twice at UC San Francisco.
   </p>
   <p class="text-[18.5px] md:text-[19px] text-neutral-800 leading-7">
     In my free time, I enjoy spending time outdoors backpacking, birdwatching, and golfing, as well as playing strategy games such as chess, crossword, and poker.
@@ -182,9 +182,6 @@ const work = (projects as any[]).sort((a,b)=>(a.weight??999)-(b.weight??999));
         <article class="py-4">
           <div class="font-semibold text-[19px] leading-snug"><span set:html={e.company}></span></div>
           <div class="text-[19px] leading-snug text-neutral-600">{e.title}</div>
-          {e.supervisor && (
-            <div class="text-[19px] leading-snug text-neutral-600">Supervisor: <span class="text-neutral-700 font-medium">{e.supervisor}</span></div>
-          )}
           <div class="text-[19px] leading-snug text-neutral-600">{e.year}</div>
         </article>
       ))}
