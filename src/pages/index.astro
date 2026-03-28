@@ -157,10 +157,11 @@ const work = (projects as any[]).sort((a,b)=>(a.weight??999)-(b.weight??999));
       Education
     </h2>
 
-    <div class="mt-2 pl-10 pr-10">
+    <div class="mt-0 pl-10 pr-10">
       {education.map((e:any) => (
         <article class="py-4">
-          <div class="font-semibold text-[19px] leading-snug">{e.degree}, {e.school}</div>
+          <div class="font-semibold text-[19px] leading-snug">{e.school}</div>
+          <div class="text-[19px] leading-snug text-neutral-600">{e.degree}</div>
           <div class="text-[19px] leading-snug text-neutral-600">{e.detail}</div>
           <div class="text-[19px] leading-snug text-neutral-600">{e.year}</div>
         </article>
@@ -176,13 +177,14 @@ const work = (projects as any[]).sort((a,b)=>(a.weight??999)-(b.weight??999));
       Experience
     </h2>
 
-    <div class="mt-2 pl-10 pr-10">
+    <div class="mt-0 pl-10 pr-10">
       {experience.map((e:any) => (
         <article class="py-4">
-          <div class="font-semibold text-[19px] leading-snug">{e.title}</div>
-          <div class="font-semibold text-[19px] leading-snug text-neutral-800"><span set:html={e.company}></span>{e.supervisor && (
-            <span class="font-normal text-neutral-600">, Supervisor: <span class="text-neutral-700 font-medium">{e.supervisor}</span></span>
-          )}</div>
+          <div class="font-semibold text-[19px] leading-snug"><span set:html={e.company}></span></div>
+          <div class="text-[19px] leading-snug text-neutral-600">{e.title}</div>
+          {e.supervisor && (
+            <div class="text-[19px] leading-snug text-neutral-600">Supervisor: <span class="text-neutral-700 font-medium">{e.supervisor}</span></div>
+          )}
           <div class="text-[19px] leading-snug text-neutral-600">{e.year}</div>
         </article>
       ))}
