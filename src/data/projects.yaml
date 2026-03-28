@@ -10,71 +10,71 @@
   highlight: ""
   link: ""
   linkText: ""
-  weight: 2
+  weight: 7
 
 - title: "Transformer Language Model"
-  summary: "Built a language model with Triton kernels, distributed data parallel training, and optimizer state sharding."
+  summary: "Built a language model with custom GPU kernels, distributed data parallel training, and optimizer state sharding."
   highlight: ""
   link: ""
   linkText: ""
-  weight: 3
+  weight: 2
 
 - title: "Graph Neural Network Recommender System"
   summary: "Built a graph neural network user-article recommender system on the Microsoft News Dataset (MIND)."
   highlight: ""
   link: "https://medium.com/stanford-cs224w/link-prediction-on-mind-dataset-with-pyg-5ade4214f823"
   linkText: "View Report"
-  weight: 4
+  weight: 3
 
 - title: "Price-Pure Prediction of Daily Price Changes in Binary Event Contracts"
   summary: "Forecasted daily price changes in binary event contracts backtesting on 10K+ time-series samples from Kalshi."
   highlight: ""
   link: "https://github.com/molofsky/forecasting-kalshi"
   linkText: "View Code"
-  weight: 5
+  weight: 4
 
 - title: "Comparing Reinforcement Learning Methods for Sparse vs. Dense Rewards"
   summary: "Benchmarked PPO, DDPG, SAC, and TD3 policies on a 1,000 sample states from the Point Maze environment."
   highlight: ""
   link: "https://github.com/AdrS/cs234-project"
   linkText: "View Code"
-  weight: 6
+  weight: 5
 
 - title: "Five-Stage Pipelined MIPS Processor"
   summary: "Developed a five-stage pipelined processor for the MIPS ISA with hazard detection, forwarding, and stall control."
   highlight: ""
   link: ""
   linkText: ""
-  weight: 7
+  weight: 8
 
 - title: "Register Renaming in a RISC-V Processor"
   summary: "Implemented register renaming logic in a pipelined RISC-V processor to eliminate write after write and write after read hazards."
   highlight: ""
   link: ""
   linkText: ""
-  weight: 8
+  weight: 9
 
 - title: "Performance Tradeoffs of Error-Correcting Codes within Network Routers"
   summary: "Benchmarked parity, checksum, and Hamming error-correcting codes in 8×8 2D Torus routers using BookSim."
   highlight: ""
   link: ""
   linkText: ""
-  weight: 9
+  weight: 10
 
 - title: "Formalizing Intel's Remote Action Request"
   summary: "Defined Intel's Remote Action Request for remote TLB shootdowns through memory transiency models."
   link: ""
   linkText: ""
-  weight: 10
+  weight: 11
 
 - title: "Cool Compiler"
   summary: "Developed a compiler for the Cool programming language with lexical analysis, parsing, semantic analysis, and MIPS code generation."
   link: ""
   linkText: ""
-  weight: 11
+  weight: 12
 
 - title: "Pintos OS"
   summary: "Built an operating system with thread scheduling, user program execution, virtual memory, and file systems."
   link: ""
   linkText: ""
-  weight: 12
+  weight: 13

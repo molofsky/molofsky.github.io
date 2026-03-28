@@ -3,9 +3,6 @@
   company: "Redwood Research"
   supervisor: "Dr. Justin Shenk"
   location: "Berkeley, CA"
-  points:
-    - "Building infrastructure for interpretability research on large language models."
-    - "Developing GPU kernels, architecting distributed inference, and optimizing machine learning workloads."
   weight: 1
 
 - year: "2024 - 2025"
@@ -13,9 +10,6 @@
   company: "Stanford University"
   supervisor: "Dr. Barbara Engelhardt"
   location: "Stanford, CA"
-  points:
-    - "Developed end-to-end pipelines for training, evaluating, testing, and deploying machine learning models."
-    - "Managed distributed training jobs, eliminated bottlenecks, and tuned performance."
   weight: 2
 
 - year: "Summer 2024"
@@ -23,9 +17,6 @@
   company: "Gladstone Institutes"
   supervisor: "Dr. Barbara Engelhardt"
   location: "San Francisco, CA"
-  points:
-    - "Developed image reconstruction, analysis, and visualization pipelines for time-lapse microscopy."
-    - "Implemented data preprocessing, feature extraction, and image registration across 4K+ images."
   weight: 3
 
 - year: "Summer 2023"
@@ -33,9 +24,6 @@
   company: "University of California, San Francisco"
   supervisor: "Dr. Tomasz Nowakowski"
   location: "San Francisco, CA"
-  points:
-    - "Developed multimodal models integrating single cell, spatial genomics, and histological data."
-    - "Managed distributed training jobs, logged metrics, and tuned hyperparameters."
   weight: 4
 
 - year: "Summer 2019"
@@ -43,6 +31,4 @@
   company: "University of California, San Francisco"
   supervisor: "Dr. Julia Sbierski-Kind"
   location: "San Francisco, CA"
-  points:
-    - "Analyzed stromal–immune cell interactions using confocal microscopy, flow cytometry, and histological data."
   weight: 5

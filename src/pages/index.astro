@@ -2,6 +2,7 @@
 import "../styles/tailwind.css";
 import Header from "../components/Header.astro";
 import expRaw from "../data/experience.yaml?raw";
+import eduRaw from "../data/education.yaml?raw";
 import projectsRaw from "../data/projects.yaml?raw";
 import YAML from "yaml";
 
@@ -9,9 +10,11 @@ import YAML from "yaml";
 import avatarUrl from "../assets/AdrianMolofsky.png";
 
 const exp = YAML.parse(expRaw);
+const edu = YAML.parse(eduRaw);
 const projects = YAML.parse(projectsRaw);
 const tagline = "Artificial Intelligence, Systems";
 const experience = (exp as any[]).sort((a,b)=>(a.weight??999)-(b.weight??999));
+const education = (edu as any[]).sort((a,b)=>(a.weight??999)-(b.weight??999));
 const work = (projects as any[]).sort((a,b)=>(a.weight??999)-(b.weight??999));
 ---
 
@@ -123,21 +126,20 @@ const work = (projects as any[]).sort((a,b)=>(a.weight??999)-(b.weight??999));
 </section>
 
 <!-- BIOGRAPHY -->
-<section id="biography" data-spy="section" class="py-15 scroll-mt-24">
+<section id="biography" data-spy="section" class="py-10 scroll-mt-24">
   <div class="mx-auto max-w-screen-xl px-6">
    <h2 class="text-[2rem] md:text-[2.25rem] font-semibold text-neutral-900 tracking-tight">
   Biography
 </h2>
 <div class="mt-2 space-y-4 pl-10 pr-10">
   <p class="text-[18.5px] md:text-[19px] text-neutral-800 leading-7">
-    I am currently a machine learning systems engineer at <a href="https://www.redwoodresearch.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Redwood Research</a>, where I am building infrastructure for interpretability research on large language models.
+    I am currently a research resident at <a href="https://www.redwoodresearch.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Redwood Research</a>, where I build infrastructure for interpretability research on large language models.
   </p>
   <p class="text-[18.5px] md:text-[19px] text-neutral-800 leading-7">
     I received my M.S. and B.S. in <a href="https://www.cs.stanford.edu/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Computer Science</a> from <a href="https://www.stanford.edu/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Stanford University</a>, with a minor in <a href="https://ee.stanford.edu/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Electrical Engineering</a>,
-    specializing in artificial intelligence and systems, advised by <a href="https://en.wikipedia.org/wiki/Mark_Alan_Horowitz" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Dr. Mark Horowitz</a>.
+    specializing in artificial intelligence and systems, advised by <a href="https://en.wikipedia.org/wiki/Mark_Alan_Horowitz" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Dr. Mark Horowitz</a>.     My graduate work focused on machine learning systems and my undergraduate work focused on performance engineering.
   </p>
   <p class="text-[18.5px] md:text-[19px] text-neutral-800 leading-7">
-    My graduate work focused on machine learning systems and my undergraduate work focused on performance engineering.
     I spent a year as a machine learning researcher at Stanford and as a data science intern at Gladstone Institutes, supervised by <a href="https://en.wikipedia.org/wiki/Barbara_Engelhardt" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Dr. Barbara Engelhardt</a>.
     Before that, I was a research intern twice at UC San Francisco, working under <a href="https://bms.ucsf.edu/people/tomasz-nowakowski-phd" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Dr. Tomasz Nowakowski</a> and <a href="https://www.medizin.uni-tuebingen.de/de/das-klinikum/mitarbeiter/profil/5212" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Dr. Julia Sbierski-Kind</a>.
   </p>
@@ -148,42 +150,40 @@ const work = (projects as any[]).sort((a,b)=>(a.weight??999)-(b.weight??999));
   </div>
 </section>
 
+<!-- EDUCATION -->
+<section id="education" data-spy="section" class="py-8 scroll-mt-24">
+  <div class="mx-auto max-w-screen-xl px-6">
+    <h2 class="text-[2rem] md:text-[2.25rem] font-semibold text-neutral-900 tracking-tight">
+      Education
+    </h2>
+
+    <div class="mt-2 pl-10 pr-10">
+      {education.map((e:any) => (
+        <article class="py-4">
+          <div class="font-semibold text-[19px] leading-snug">{e.degree}, {e.school}</div>
+          <div class="text-[19px] leading-snug text-neutral-600">{e.detail}</div>
+          <div class="text-[19px] leading-snug text-neutral-600">{e.year}</div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
 <!-- EXPERIENCE -->
-<section id="experience" data-spy="section" class="py-15 scroll-mt-24">
+<section id="experience" data-spy="section" class="py-8 scroll-mt-24">
   <div class="mx-auto max-w-screen-xl px-6">
     <h2 class="text-[2rem] md:text-[2.25rem] font-semibold text-neutral-900 tracking-tight">
       Experience
     </h2>
 
-    <div class="mt-0 pl-10 pr-10">
+    <div class="mt-2 pl-10 pr-10">
       {experience.map((e:any) => (
-        <article class="py-7 border-b border-neutral-200">
-          <!-- Left grows, right stays auto width -->
-          <div class="grid grid-cols-[1fr_auto] gap-x-10 items-start">
-            <div class="min-w-0 break-words">
-              <div class="font-semibold text-[19px] leading-snug">{e.title}</div>
-              <div class="font-semibold text-[19px] leading-snug">
-              <span set:html={e.company}></span>{e.supervisor && (
-                <span class="text-[17px] text-neutral-600 font-normal">, Supervisor: <span class="text-neutral-700 font-medium">{e.supervisor}</span></span>
-              )}
-            </div>
-            </div>
-            
-            <div class="text-right">
-              <div class="text-[17px] text-neutral-600 whitespace-nowrap">{e.year}</div>
-              <div class="text-[17px] text-neutral-600 whitespace-nowrap">{e.location}</div>
-            </div>
-          </div>
-
-          {Array.isArray(e.points) && e.points.length > 0 ? (
-            <ul class="mt-2 list-disc pl-6 text-[17.5px] leading-8 text-neutral-700 space-y-1">
-              {e.points.map((p:string) => <li>{p}</li>)}
-            </ul>
-          ) : (
-            e.description && (
-              <p class="mt-2 text-[17.5px] leading-8 text-neutral-700">{e.description}</p>
-            )
-          )}
+        <article class="py-4">
+          <div class="font-semibold text-[19px] leading-snug">{e.title}</div>
+          <div class="font-semibold text-[19px] leading-snug text-neutral-800"><span set:html={e.company}></span>{e.supervisor && (
+            <span class="font-normal text-neutral-600">, Supervisor: <span class="text-neutral-700 font-medium">{e.supervisor}</span></span>
+          )}</div>
+          <div class="text-[19px] leading-snug text-neutral-600">{e.year}</div>
         </article>
       ))}
     </div>
@@ -191,7 +191,7 @@ const work = (projects as any[]).sort((a,b)=>(a.weight??999)-(b.weight??999));
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" data-spy="section" class="py-15 scroll-mt-24">
+<section id="projects" data-spy="section" class="py-10 scroll-mt-24">
   <div class="mx-auto max-w-screen-xl px-6">
     <h2 class="text-[2rem] md:text-[2.25rem] font-semibold text-neutral-900 tracking-tight">
       Projects
