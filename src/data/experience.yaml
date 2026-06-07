@@ -1,34 +1,29 @@
-- year: "February 2026 - Present"
+- year: "June 2026 - Present"
+  title: "Member of Technical Staff"
+  company: "Thesis"
+  weight: 1
+
+- year: "February 2026 - May 2026"
   title: "Research Resident"
   company: "Redwood Research"
-  supervisor: "Dr. Justin Shenk"
-  location: "Berkeley, CA"
-  weight: 1
+  weight: 2
 
 - year: "June 2024 - September 2025"
   title: "Machine Learning Researcher"
   company: "Stanford University"
-  supervisor: "Dr. Barbara Engelhardt"
-  location: "Stanford, CA"
-  weight: 2
+  weight: 3
 
 - year: "June 2024 - September 2024"
   title: "Data Science Intern"
   company: "Gladstone Institutes"
-  supervisor: "Dr. Barbara Engelhardt"
-  location: "San Francisco, CA"
-  weight: 3
+  weight: 4
 
 - year: "June 2023 - September 2023"
   title: "Research Intern"
   company: "University of California, San Francisco"
-  supervisor: "Dr. Tomasz Nowakowski"
-  location: "San Francisco, CA"
-  weight: 4
+  weight: 5
 
 - year: "June 2019 - September 2019"
   title: "Research Intern"
   company: "University of California, San Francisco"
-  supervisor: "Dr. Julia Sbierski-Kind"
-  location: "San Francisco, CA"
-  weight: 5
+  weight: 6
