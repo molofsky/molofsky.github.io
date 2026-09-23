@@ -7,10 +7,10 @@ const nav = [
 ];
 ---
 
-<header class="fixed top-0 left-0 right-0 z-40 backdrop-blur bg-white/60">
+<header class="fixed top-0 left-0 right-0 z-40 backdrop-blur bg-[var(--header-background)]">
   <div class="w-full px-6 h-14 flex items-center justify-between">
-    <a href="/" class="font-bold text-[30px] text-[var(--stanford-black)]">
-      Adrian <span class="text-[var(--stanford-cardinal)]">Molofsky</span>
+    <a href="/" class="font-bold text-[30px] text-[var(--primary-text)]">
+      Adrian <span class="text-[var(--accent)]">Molofsky</span>
     </a>
 
     <nav id="topnav" class="flex gap-8">
@@ -22,10 +22,10 @@ const nav = [
           class="
             text-[28px]
             font-normal
-            text-neutral-700
-            hover:text-[var(--stanford-black)]
+            text-[color:var(--detail-text)]
+            hover:text-[var(--primary-text)]
             transition-colors
-            data-[active=true]:text-[var(--stanford-cardinal)]
+            data-[active=true]:text-[var(--accent)]
           "
         >
           {n.label}

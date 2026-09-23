@@ -1,15 +1,40 @@
 /* Tailwind */
 @import "tailwindcss";
 
-/* Global base */
-:root{
-  --stanford-black: #2E2D29;
-  --stanford-cardinal: #8C1515;
-  --stanford-grey: #53565A;
+/* Shared theme colors; light mode preserves the original palette. */
+:root {
+  color-scheme: light dark;
+  --page-background: #fff;
+  --primary-text: #2E2D29;
+  --heading-text: var(--color-neutral-900);
+  --body-text: var(--color-neutral-800);
+  --secondary-text: var(--color-neutral-600);
+  --detail-text: var(--color-neutral-700);
+  --icon-text: #53565A;
+  --accent: #8C1515;
+  --link-text: var(--color-blue-600);
+  --border-color: var(--color-neutral-200);
+  --header-background: rgb(255 255 255 / 60%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page-background: #1C1B19;
+    --primary-text: #F0EFEC;
+    --heading-text: #F0EFEC;
+    --body-text: #D6D4CF;
+    --secondary-text: #B8B6B0;
+    --detail-text: #D6D4CF;
+    --icon-text: #B8B6B0;
+    --link-text: #8AB4F8;
+    --border-color: #45433F;
+    /* Keep navigation readable over bright content beneath the blur. */
+    --header-background: rgb(28 27 25 / 85%);
+  }
 }
 
 html, body {
   font-family: "Computer Modern Serif", "Latin Modern Roman", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  color: var(--stanford-black);
-  background: #fff;
+  color: var(--primary-text);
+  background: var(--page-background);
 }
